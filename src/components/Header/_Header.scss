@@ -1,0 +1,7 @@
+@import '../../required/variables.scss';
+@import '../../required/mixins.scss';
+
+.hero-title {
+  @include reset;
+  font-size: $font-xxl;
+}

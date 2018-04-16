@@ -1,0 +1,38 @@
+@import '../../required/variables.scss';
+@import '../../required/mixins.scss';
+@import '../../required/colors.scss';
+
+.about {
+  background-color: $color-purple;
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  height: 45vh;
+  margin: 0;
+  padding: $space-xxxl ($space-xxxl * 2);
+
+  &--description {
+    color: $color-black;
+  }
+
+  &--list {
+    @include reset;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &--title {
+    background-color: $color-white;
+    color: $color-black;
+    font-size: $font-lg;
+    margin: 0;
+    padding: $space-sm;
+    text-align: center;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

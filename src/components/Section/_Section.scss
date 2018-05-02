@@ -5,6 +5,7 @@
 .section {
   display: block;
   height: 100vh;
+  min-height: 70.0rem;
   padding: 16vh 8vw;
   position: relative;
 
@@ -73,7 +74,7 @@
 
     &:hover {
       color: $color-black;
-      
+
       &::before {
         width: 100%;
       }

@@ -1,9 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './_Header.scss'
+import hero from '../../images/hero.svg';
 
 const Header = () => (
-  <h1 className="hero-title">Pushing pixels with a purpose.</h1>
+  <div className="header">
+    <img src={ hero }/>
+  </div>
 )
 
 export default Header

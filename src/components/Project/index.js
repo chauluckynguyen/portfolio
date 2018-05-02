@@ -5,14 +5,13 @@ import './_Project.scss';
 class Project extends React.Component {
   render() {
     const { title, link, imageSrc } = this.props;
-
     return (
       <li className="project">
-        <a href={ link }>
+        <a className="project--link" href={ link }>
           <img alt="" src={ imageSrc }/>
         </a>
         <div>
-          <h1 className="project--title">{ title }</h1>
+          <a className="project--title" href={ link }>{ title }</a>
         </div>
       </li>
     )

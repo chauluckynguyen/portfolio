@@ -28,8 +28,8 @@ const IndexPage = () => (
     </Section>
     <Section title="Creative Work 🎈" link="View all" id="projects">
       <ProjectList>
-        <Project title="Focus" link="/page-2" imageSrc={ project1 }/>
-        <Project title="Forecast Fun" link="/page-2" imageSrc={ project2 }/>
+        <Project title="Focus" link="/focus" imageSrc={ project1 }/>
+        <Project title="Forecast Fun" link="/forecast-fun" imageSrc={ project2 }/>
       </ProjectList>
       <div className="section--background"></div>
     </Section>

@@ -8,7 +8,9 @@
     "@ibm/type": "^0.5.4",
     "classnames": "^2.2.5",
     "gatsby": "^1.9.241",
+    "gatsby-image": "^1.0.47",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-page-load-delay": "^0.1.2",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-sass": "^1.0.25",
     "react-helmet": "^5.2.0"

@@ -7,12 +7,15 @@
   display: flex;
   flex: 0 0 50%;
   flex-direction: column;
-  height: 45vh;
   margin: 0;
+  min-height: 40.0rem;
+  min-width: 40.0rem;
   padding: $space-xxxl ($space-xxxl * 2);
 
   &--description {
     color: $color-black;
+    margin: 0;
+    padding: $space-md 0;
   }
 
   &--list {

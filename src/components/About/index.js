@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './_About.scss'
-// import profile from '../../images/me.png'
 
 class About extends React.Component {
   render() {

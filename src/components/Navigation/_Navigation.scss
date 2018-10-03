@@ -6,7 +6,71 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: ($space-xxxl * 2) ($space-xxxl * 2) 0;
+  padding: ($space-xxxl * 2) ($space-xxxl * 6) 0;
+  width: 100%;
+
+  &__mobile {
+    opacity: 1;
+
+  &__hidden {
+      opacity: 0;
+    }
+  }
+
+  &--icon {
+    height: 2rem;
+    width: 2.5rem;
+  }
+
+  &--bars {
+    height: 2rem;
+    width: 2.5rem;
+    position: relative;
+  }
+
+  &--bar{
+    background: $color-black;
+    width: 2.4rem;
+    height: 0.2rem;
+    position: absolute;
+
+    &__1 {
+      transition: all 200ms ease-in;
+
+      &__rotated {
+        transform: rotate(45deg);
+        top: 0.8rem;
+      }
+    }
+
+    &__2 {
+      top: 0.8rem;
+      transition: all 200ms ease-in;
+
+      &__expanded {
+        top: -65px;
+        left: -500px;
+        height: 100vh;
+        width: 100vw;
+        background: $color-purple;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__3 {
+      top: 1.6rem;
+      transition: all 200ms ease-in;
+
+      &__rotated {
+        top: 0.8rem;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
 
   &--list {
     @include reset;
@@ -14,12 +78,34 @@
   }
 
   &--logo {
-    color: $color-teal;
+    color: $color-purple;
     font-size: $font-sm;
-    font-weight: bold;
     letter-spacing: 0.2rem;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
+
+    &::before {
+      background: $color-purple;
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      left: 0;
+      margin: 0 0 (-$space-sm);
+      position: absolute;
+      transition: width 0.1s linear;
+      vertical-align: middle;
+      width: 0%;
+      height: 0.2rem;
+    }
+
+    &:hover {
+      color: $color-black;
+
+      &::before {
+        width: 100%;
+      }
+    }
   }
 
   &--link {
@@ -33,14 +119,14 @@
       text-decoration: none;
 
       &::before {
-        background: $color-black;
+        background: $color-purple;
         bottom: 0;
         content: '';
         display: inline-block;
         left: 0;
         margin: 0 0 (-$space-sm);
         position: absolute;
-        transition: width 0.2s linear;
+        transition: width 0.1s linear;
         vertical-align: middle;
         width: 0%;
         height: 0.2rem;
@@ -54,5 +140,28 @@
         }
       }
     }
+
+    &:last-child {
+      a {
+        color: $color-light-gray;
+
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  background: $color-white;
+  box-shadow: 0rem 0.1rem 0.5rem 0.1rem #f4f4f4;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 2rem 19.2rem 2rem;
+
+  + .section__hero {
+    padding-top: 16rem;
   }
 }

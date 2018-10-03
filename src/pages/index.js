@@ -10,8 +10,9 @@ import AboutList from '../components/AboutList/index'
 import Footer from '../components/Footer/index'
 import Navigation from '../components/Navigation/index'
 
-import project1 from '../images/todolist.png'
-import project2 from '../images/weather.png'
+import project1 from '../images/Artboard.png'
+import project2 from '../images/Artboard2.png'
+import project3 from '../images/Artboard3.png'
 
 import "@ibm/type/css/ibm-type.min.css"
 
@@ -21,19 +22,14 @@ const IndexPage = () => (
     <Section className="section__hero">
       <Header />
     </Section>
-    <Section className="section__about" title="Hey There, Stranger 👋" id="about">
-      <AboutList>
-        <About title="Nice to meet you ✨" description="I'm Lucky, a front-end developer passionate about designing and building UI solutions that empower people. 💪 I graduated from UC San Diego with a degree in Computer Science and a minor in Cognitive Science. I currently work as a UX Engineer at ServiceNow. In my spare time, I enjoy learning new languages, tools, and frameworks and building fun, personal projects. I also love playing with dogs 🐶, trying new foods 🍣, and dancing to groovy music. 🕺 I'd love to chat with you about technology, design, music, or food. So let's be friends! 😊"/>
-      </AboutList>
-    </Section>
-    <Section title="Creative Work 🎈" link="View all" id="projects">
+    <Section title="Creative Work" link="View all" id="projects">
       <ProjectList>
-        <Project title="Focus" link="/focus" imageSrc={ project1 }/>
-        <Project title="Forecast Fun" link="/forecast-fun" imageSrc={ project2 }/>
+        <Project title="ServiceNow Design System Home Page" link="/servicenow-homepage" imageSrc={ project1 } description="What I worked on during my ServiceNow Internship."/>
+        <Project title="Daily UI" link="/daily-ui" imageSrc={ project2 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
+        <Project title="Wonder Plates" link="/wonder-plates" imageSrc={ project3 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
+        <Project title="ServiceNow Agent Workspace" link="/servicenow-workspace" imageSrc={ project1 } description="What I worked on during my ServiceNow Internship."/>
       </ProjectList>
-      <div className="section--background"></div>
     </Section>
-    <Footer />
   </div>
 )
 

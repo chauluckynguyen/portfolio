@@ -4,15 +4,14 @@ import './_Project.scss';
 
 class Project extends React.Component {
   render() {
-    const { title, link, imageSrc } = this.props;
+    const { title, link, imageSrc, description } = this.props;
     return (
-      <li className="project">
+      <li className="project" aria-label={ title }>
         <a className="project--link" href={ link }>
-          <img alt="" src={ imageSrc }/>
+          <article className="project--article">
+            <img src={ imageSrc }/>
+          </article>
         </a>
-        <div>
-          <a className="project--title" href={ link }>{ title }</a>
-        </div>
       </li>
     )
   }

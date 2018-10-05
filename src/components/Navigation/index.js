@@ -51,7 +51,7 @@ class Navigation extends React.Component {
               <div className={"nav__mobile" + (this.state.mobileView ? "" : " nav__mobile__hidden")}>
                 <ul className="nav--list__mobile">
                   <li className="nav--link__mobile"><a href="#about">About</a></li>
-                  <li className="nav--link__mobile"><a href="#projects">Projects</a></li>
+                  <li className="nav--link__mobile"><a href="#projects">Work</a></li>
                   <li className="nav--link__mobile"><a href="#resume">Resume</a></li>
                   <li className="nav--link__mobile"><a href="#contact">luckyknguyen@gmail.com</a></li>
                 </ul>
@@ -65,7 +65,7 @@ class Navigation extends React.Component {
       return (
         <ul className="nav--list">
           <li className="nav--link"><a href="#about">About</a></li>
-          <li className="nav--link"><a href="#projects">Projects</a></li>
+          <li className="nav--link"><a href="#projects">Work</a></li>
           <li className="nav--link"><a href="#resume">Resume</a></li>
           <li className="nav--link"><a href="#contact">luckyknguyen@gmail.com</a></li>
         </ul>

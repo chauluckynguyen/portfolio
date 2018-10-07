@@ -12,8 +12,10 @@ import Navigation from '../components/Navigation/index'
 
 import project1 from '../images/graphic1.gif'
 import project1_static from '../images/graphic1static.png'
-import project2 from '../images/Artboard2.png'
-import project3 from '../images/Artboard3.png'
+import project2 from '../images/graphic2.gif'
+import project2_static from '../images/graphic2static.png'
+import project3 from '../images/graphic3.gif'
+import project3_static from '../images/graphic3static.png'
 
 import "@ibm/type/css/ibm-type.min.css"
 
@@ -32,8 +34,8 @@ class IndexPage extends React.Component {
         <Section title="Work" link="View all" id="projects">
           <ProjectList>
             <Project title="ServiceNow Design System" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static } description="What I worked on during my ServiceNow Internship."/>
-            <Project title="Daily UI Challenge" link="/daily-ui" staticSrc={ project2 } gifSrc={ project2 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
-            <Project title="Wonder Plates" link="/wonder-plates" staticSrc={ project3 } gifSrc={ project3 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
+            <Project title="Daily UI Challenge" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
+            <Project title="Wonder Plates" link="/wonder-plates" staticSrc={ project3_static } gifSrc={ project3 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
           </ProjectList>
         </Section>
       </div>

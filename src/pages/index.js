@@ -31,13 +31,23 @@ class IndexPage extends React.Component {
         <Section className="section__hero">
           <Header />
         </Section>
-        <Section title="Work" link="View all" id="projects">
+        <Section title="Experience & Projects" link="View all" id="projects">
           <ProjectList>
             <Project title="ServiceNow Design System" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static } description="What I worked on during my ServiceNow Internship."/>
             <Project title="Daily UI Challenge" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
             <Project title="Wonder Plates" link="/wonder-plates" staticSrc={ project3_static } gifSrc={ project3 } description="A chatbot application that seeks to improve the social experiences at UC San Diego."/>
           </ProjectList>
         </Section>
+        <Section title="Lucky" id="about">
+          <p>/ˈləkē/</p>
+          <p>noun</p>
+
+          <p>Graduate from University of California, San Diego</p>
+          <p>Enthusiast of moving pixels to prototype and prototype to product</p>
+
+          <p>I am facsinated by the intersection of design and technology, and how it can be used for the greater good.</p>
+        </Section>
+        <Footer/>
       </div>
       )
   }

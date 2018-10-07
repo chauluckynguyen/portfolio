@@ -15,34 +15,6 @@
 		font-weight: 100;
 		line-height: 6rem;
 		margin: 0 0 1rem;
-
-				a {
-			color: $color-purple;
-			position: relative;
-			text-decoration: none;
-
-			&::before {
-				background: $color-purple;
-				bottom: 0;
-				content: '';
-				display: inline-block;
-				left: 0;
-				margin: 0 0 (-$space-sm);
-				position: absolute;
-				transition: width 0.1s linear;
-				vertical-align: middle;
-				width: 0%;
-				height: 0.2rem;
-			}
-
-			&:hover {
-				color: $color-black;
-
-				&::before {
-					width: 100%;
-				}
-			}
-		}
 	}
 
 	&--small-description {
@@ -58,34 +30,6 @@
 		font-size: $space-lg;
 		display: inline-block;
 		padding: $space-lg;
-
-		a {
-			color: $color-purple;
-			position: relative;
-			text-decoration: none;
-
-			&::before {
-				background: $color-purple;
-				bottom: 0;
-				content: '';
-				display: inline-block;
-				left: 0;
-				margin: 0 0 (-$space-sm);
-				position: absolute;
-				transition: width 0.1s linear;
-				vertical-align: middle;
-				width: 0%;
-				height: 0.2rem;
-			}
-
-			&:hover {
-				color: $color-black;
-
-				&::before {
-					width: 100%;
-				}
-			}
-		}
 	}
 }
 

@@ -3,11 +3,8 @@
 @import '../../required/colors.scss';
 
 .footer {
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  padding: $space-md;
-  position: absolute;
-  width: 100%;
+	background: $color-white;
+	bottom: 0;
+	z-index: 1;
+	padding: 2rem 19.2rem 10rem;
 }

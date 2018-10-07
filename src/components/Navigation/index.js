@@ -1,5 +1,6 @@
-import React from 'react'
-import './_Navigation.scss'
+import React from 'react';
+import './_Navigation.scss';
+import Url from '../Url/index';
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -50,10 +51,10 @@ class Navigation extends React.Component {
             <div className={"nav--bar nav--bar__2" + (this.state.mobileView ? " nav--bar__2__expanded": "")}>
               <div className={"nav__mobile" + (this.state.mobileView ? "" : " nav__mobile__hidden")}>
                 <ul className="nav--list__mobile">
-                  <li className="nav--link__mobile"><a href="#about">About</a></li>
-                  <li className="nav--link__mobile"><a href="#projects">Work</a></li>
-                  <li className="nav--link__mobile"><a href="#resume">Resume</a></li>
-                  <li className="nav--link__mobile"><a href="#contact">luckyknguyen@gmail.com</a></li>
+                  <li className="nav--link__mobile"><Url url="#about" title="About"/></li>
+                  <li className="nav--link__mobile"><Url url="#projects" title="Work"/></li>
+                  <li className="nav--link__mobile"><Url url="#resume" title="Resume"/></li>
+                  <li className="nav--link__mobile"><Url url="#contact" title="luckyknguyen@gmail.com"/></li>
                 </ul>
               </div>
             </div>
@@ -64,10 +65,10 @@ class Navigation extends React.Component {
     } else {
       return (
         <ul className="nav--list">
-          <li className="nav--link"><a href="#about">About</a></li>
-          <li className="nav--link"><a href="#projects">Work</a></li>
-          <li className="nav--link"><a href="#resume">Resume</a></li>
-          <li className="nav--link"><a href="#contact">luckyknguyen@gmail.com</a></li>
+          <li className="nav--link"><Url url="#about" title="About"/></li>
+          <li className="nav--link"><Url url="#projects" title="Work"/></li>
+          <li className="nav--link"><Url url="#resume" title="Resume"/></li>
+          <li className="nav--link"><Url url="#contact" title="luckyknguyen@gmail.com"/></li>
         </ul>
       )
     }
@@ -76,7 +77,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="nav" aria-label="Main Navigation" ref={ this.navBar }>
-        <a className="nav--logo" href="/">Lucky Nguyen</a>
+        <Url className="ln-url__logo" url="/" title="Lucky Nguyen"/>
         {this.renderNavigation()}
       </nav>
     )

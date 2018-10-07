@@ -1,0 +1,75 @@
+@import '../../required/variables.scss';
+@import '../../required/colors.scss';
+
+.ln-url {
+	color: $color-gray;
+	font-size: $font-sm;
+	position: relative;
+	text-decoration: none;
+
+	&::before {
+		background: $color-purple;
+		bottom: 0;
+		content: '';
+		display: inline-block;
+		height: 0.2rem;
+		right: 0;
+		margin: 0 0 (-$space-sm);
+		position: absolute;
+		transition: width .2s ease;
+		vertical-align: middle;
+		width: 0;
+	}
+
+	&:hover,
+	&.is-hover {
+		color: $color-black;
+
+		&::before {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&__contrast {
+		color: $color-purple;
+
+		.header--description & {
+			font-size: 4rem;
+		}
+	}
+
+	&__logo {
+		color: $color-purple;
+		letter-spacing: 0.2rem;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	&__social {
+		color: $color-gray;
+		font-size: $space-xxxl;
+		margin-right: $space-md;
+
+		&::last-of-type {
+			margin-right: 0;
+		}
+
+		&::before {
+			display: none;
+		}
+
+		&:hover {
+			color: $color-purple;
+		}
+
+		&:focus {
+			color: $color-purple;
+			outline: none;
+		}
+	}
+
+	.section--header & {
+		margin-left: $space-lg;
+	}
+}

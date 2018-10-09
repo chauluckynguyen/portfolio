@@ -9,6 +9,7 @@ import About from '../components/About/index'
 import AboutList from '../components/AboutList/index'
 import Footer from '../components/Footer/index'
 import Navigation from '../components/Navigation/index'
+import Layout from '../components/layout'
 
 import project1 from '../images/graphic1.gif'
 import project1_static from '../images/graphic1static.png'
@@ -26,6 +27,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
+      <Layout>
       <div>
         <Navigation />
         <Section className="section__hero">
@@ -49,6 +51,7 @@ class IndexPage extends React.Component {
         </Section>
         <Footer/>
       </div>
+      </Layout>
       )
   }
 }

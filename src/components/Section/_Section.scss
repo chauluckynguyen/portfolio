@@ -5,8 +5,16 @@
 .section {
   display: block;
   min-height: 50.0rem;
-  padding: 0 ($space-xxxl * 6) 0;
+  padding: 10rem ($space-xxxl * 6) 10rem;
   position: relative;
+
+  &:first-of-type{
+    padding-top: 2.4rem;
+  }
+
+  &#work {
+    background: $color-white;
+  }
 
   &__hero {
     align-items: center;
@@ -29,20 +37,88 @@
     }
   }
 
+  &--position {
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: $color-gray;
+  }
+
+  &--period{
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: $color-gray;
+    margin-bottom: $space-xs;
+    text-transform: uppercase;
+  }
+
   &--title {
     @include reset;
-    font-size: $font-xl;
+    font-size: $font-md;
+    font-weight: bold;
     letter-spacing: $space-base;
-    margin: 0 0 $space-xxl;
+    margin: 0 0 $space-xl;
 
-    &::before {
-      background: $color-purple;
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: $space-xs;
-      height: $space-xxxl;
-      margin-right: $space-md;
+    &__project {
+      font-size: $font-xxl;
+      font-weight: 500;
+      margin: 0 0 $space-lg;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &--summary {
+    font-weight: 100;
+    margin-bottom: $space-xxxl;
+  }
+
+  &--body {
+    // font-weight: 100;
+    // margin-bottom: $space-xxl;
+
+    img {
+      padding: 4rem 0;
+      width: 100%;
+    }
+  }
+
+  &--display {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $space-xxxl * 2;
+
+    &--content {
+      flex: 0 0 50%;
+    }
+
+    img {
+      flex: 0 0 50%;
+      width: 50rem;
+    }
+  }
+
+  &--grid {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 3.2rem 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+    li {
+      flex: auto;
+      height: 33rem;
+      width: 33rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 

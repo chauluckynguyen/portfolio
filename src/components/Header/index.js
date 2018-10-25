@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import './_Header.scss'
-import Url from '../Url/index';
-// import hero from '../../images/hero.svg';
+import lucky from '../../images/lucky.svg';
+import outline_oval from '../../images/outline-oval.svg'
+import triangle from '../../images/triangle.svg'
+import square from '../../images/square.svg'
+import loop from '../../images/loop.svg'
+import circle2 from '../../images/circle2.svg'
 
 class Header extends React.Component {
 	constructor(props) {
@@ -25,9 +29,15 @@ class Header extends React.Component {
 	render(){
 		return (
 		  <div className={"header animated animatedFadeInUp" + (this.state.animate ? " fadeInUp" : "")}>
-		    <h1 className="header--description">Hi, I'm <Url className="ln-url__contrast" url="/" title="Lucky"/>!</h1>
-		    <p className="header--small-description">Unlike most adjectives, I'm also a UX Engineer.</p>
-		    <p className="header--status">Currently employed at <Url className="ln-url__contrast" url="https://www.servicenow.com/" title="ServiceNow"/>.</p>
+				<div className="header--background float">
+					<img className="circle" src={ outline_oval } alt="" role="presentation"/>
+					<img className="triangle spin" src={ triangle } alt="" role="presentation"/>
+					<img className="square spin" src={ square } alt="" role="presentation"/>
+					<img className="circle2" src={ circle2 } alt="" role="presentation"/>
+				</div>
+				<img src={ lucky } alt="Lucky"/>
+		    <p className="header--small-description">unlike most adjectives, i'm also a ux engineer.</p>
+				<p className="header--small-description">currently with servicenow<span>/</span>san diego, ca<span>/</span>chocolate-lover</p>
 		  </div>
 		)
 	}

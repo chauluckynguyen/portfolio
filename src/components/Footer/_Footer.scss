@@ -3,8 +3,52 @@
 @import '../../required/colors.scss';
 
 .footer {
-	background: $color-white;
+	background: $color-pink;
 	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	z-index: 1;
-	padding: 2rem 19.2rem 10rem;
+	padding: 10rem 19.2rem 10rem;
+
+	&--content {
+		display: flex;
+		flex: 1 1 50%;
+		justify-content: flex-start;
+		flex-direction: column;
+		padding-right: 20rem;
+
+		
+		&:last-child {
+			flex-direction: row;
+			justify-content: flex-end;
+			padding-right: 0;
+		}
+
+		> p {
+			font-weight: 100;
+			margin-bottom: $space-xxl;
+		}
+
+		> img {
+			margin-bottom: $space-xxl;
+			width: fit-content;
+		}
+	}
+
+	&--skills {
+		@include reset;
+		list-style: none;
+		padding-right: 5rem;
+
+		&--header {
+			font-weight: bold;
+			margin-bottom: $space-xxl;
+		}
+
+		&--item {
+			font-weight: 100;
+			margin-bottom: $space-xs;
+		}
+	}
 }

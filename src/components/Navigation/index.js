@@ -6,7 +6,6 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.renderNavigation = this.renderNavigation.bind(this);
     this.handleMobile = this.handleMobile.bind(this);
@@ -16,22 +15,11 @@ class Navigation extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount(){
-    window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleScroll = () => {
-    let sticky = (this.navBar.current.offsetTop + 45);
-    if (window.pageYOffset > sticky) {
-      this.navBar.current.classList.add("sticky")
-    } else {
-      this.navBar.current.classList.remove("sticky");
-    }
   }
 
   handleResize = () => {
@@ -51,10 +39,9 @@ class Navigation extends React.Component {
             <div className={"nav--bar nav--bar__2" + (this.state.mobileView ? " nav--bar__2__expanded": "")}>
               <div className={"nav__mobile" + (this.state.mobileView ? "" : " nav__mobile__hidden")}>
                 <ul className="nav--list__mobile">
-                  <li className="nav--link__mobile"><Url url="#about" title="About"/></li>
-                  <li className="nav--link__mobile"><Url url="#projects" title="Work"/></li>
-                  <li className="nav--link__mobile"><Url url="#resume" title="Resume"/></li>
-                  <li className="nav--link__mobile"><Url url="#contact" title="luckyknguyen@gmail.com"/></li>
+                  <li className="nav--link__mobile"><Url url="#work" title="work"/></li>
+                  <li className="nav--link__mobile"><Url url="#resume" title="resume"/></li>
+                  <li className="nav--link__mobile"><Url url="#contact" title="take a chance with me"/></li>
                 </ul>
               </div>
             </div>
@@ -65,10 +52,9 @@ class Navigation extends React.Component {
     } else {
       return (
         <ul className="nav--list">
-          <li className="nav--link"><Url url="#about" title="About"/></li>
-          <li className="nav--link"><Url url="#projects" title="Work"/></li>
-          <li className="nav--link"><Url url="#resume" title="Resume"/></li>
-          <li className="nav--link"><Url url="#contact" title="luckyknguyen@gmail.com"/></li>
+          <li className="nav--link"><Url url="#work" title="work"/></li>
+          <li className="nav--link"><Url url="#resume" title="resume"/></li>
+          <li className="nav--link"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
         </ul>
       )
     }
@@ -77,7 +63,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav className="nav" aria-label="Main Navigation" ref={ this.navBar }>
-        <Url className="ln-url__logo" url="/" title="Lucky Nguyen"/>
+        <Url className="ln-url__logo" url="/" title="lucky nguyen"/>
         {this.renderNavigation()}
       </nav>
     )

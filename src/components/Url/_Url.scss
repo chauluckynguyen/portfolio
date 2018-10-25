@@ -8,7 +8,7 @@
 	text-decoration: none;
 
 	&::before {
-		background: $color-purple;
+		background: $color-white;
 		bottom: 0;
 		content: '';
 		display: inline-block;
@@ -40,10 +40,9 @@
 	}
 
 	&__logo {
-		color: $color-purple;
+		font-weight: bold;
 		letter-spacing: 0.2rem;
 		text-decoration: none;
-		text-transform: uppercase;
 	}
 
 	&__social {
@@ -59,13 +58,21 @@
 			display: none;
 		}
 
-		&:hover {
-			color: $color-purple;
+		&:focus {
+			color: $color-white;
+			outline: none;
 		}
 
-		&:focus {
-			color: $color-purple;
-			outline: none;
+		&.is-medium:hover {
+			color: #3FF28C;
+		}
+
+		&.is-linkedin:hover {
+			color: #1174AD;
+		}
+
+		&.is-github:hover {
+			color: #99D3E8;
 		}
 	}
 

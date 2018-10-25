@@ -7,29 +7,76 @@
 	flex-direction: column;
 	height: 100%;
 	justify-content: center;
+	position: relative;
 	width: 100%;
 
-	&--description {
-		@include reset;
-		font-size: $font-md *2;
-		font-weight: 100;
-		line-height: 6rem;
-		margin: 0 0 1rem;
+	img {
+		margin-bottom: 1rem;
+	}
+
+	&--background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		.circle {
+			position: absolute; 
+			top: 100px;
+			left: -100px;
+		}
+
+		.circle2 {
+			position: absolute; 
+			bottom: 150px;
+			right: 200px;
+		}
+
+		.square{
+			position: absolute; 
+			top: 200px;
+			right: 50px;
+			left: unset;
+
+			&.spin {
+				animation-name: spinning;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+			}
+		}
+
+		.triangle {
+			position: absolute; 
+			bottom: 50px;
+			left: 50px; 
+
+
+			&.spin {
+				animation-name: spinning;
+				animation-duration: 12s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+			}
+		}
+
+		&.float {
+			animation-name: floating;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+		
 	}
 
 	&--small-description {
 		@include reset;
-		font-size: $font-lg;
-		line-height: 3.6rem;
-		margin: 0 0 2rem;
-	}
+		font-weight: 100;
+		margin: 0 0 1rem;
+		text-align: center;
 
-	&--status {
-		align-self: flex-start;
-		border: 0.2rem solid $color-black;
-		font-size: $space-lg;
-		display: inline-block;
-		padding: $space-lg;
+		> span {
+			padding: 0 2rem;
+		}
 	}
 }
 
@@ -61,3 +108,18 @@
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
 }
+
+@keyframes floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 50px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@keyframes spinning{
+	0% {
+	  -webkit-transform: rotate(0deg);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+	} 
+  }

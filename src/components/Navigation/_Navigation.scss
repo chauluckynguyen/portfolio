@@ -83,25 +83,8 @@
 
     &:last-child {
       a {
-        color: $color-light-gray;
-
-        &:hover {
-          color: $color-black;
-        }
+        font-weight: bold;
       }
     }
-  }
-}
-
-.sticky {
-  background: $color-white;
-  box-shadow: 0rem 0.1rem 0.5rem 0.1rem #f4f4f4;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  padding: 2rem 19.2rem 2rem;
-
-  + .section__hero {
-    padding-top: 16rem;
   }
 }

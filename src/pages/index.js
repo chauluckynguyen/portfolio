@@ -1,12 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import Header from '../components/Header/index'
 import Section from '../components/Section/index'
 import Project from '../components/Project/index'
 import ProjectList from '../components/ProjectList/index'
-import About from '../components/About/index'
-import AboutList from '../components/AboutList/index'
 import Footer from '../components/Footer/index'
 import Navigation from '../components/Navigation/index'
 import Layout from '../components/layout'
@@ -17,16 +14,10 @@ import project2 from '../images/graphic2.gif'
 import project2_static from '../images/graphic2static.png'
 import project3 from '../images/graphic3.gif'
 import project3_static from '../images/graphic3static.png'
-import project4 from '../images/servicenow.gif'
-import project4_static from '../images/servicenow_static.png'
 
 import "@ibm/type/css/ibm-type.min.css"
 
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Layout>

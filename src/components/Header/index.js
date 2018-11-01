@@ -1,11 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import './_Header.scss'
 import lucky from '../../images/lucky.svg';
 import outline_oval from '../../images/outline-oval.svg'
 import triangle from '../../images/triangle.svg'
 import square from '../../images/square.svg'
-import loop from '../../images/loop.svg'
 import circle2 from '../../images/circle2.svg'
 
 class Header extends React.Component {
@@ -30,10 +28,10 @@ class Header extends React.Component {
 		return (
 		  <div className={"header animated animatedFadeInUp" + (this.state.animate ? " fadeInUp" : "")}>
 				<div className="header--background float">
-					<img className="circle" src={ outline_oval } alt="" role="presentation"/>
-					<img className="triangle spin" src={ triangle } alt="" role="presentation"/>
-					<img className="square spin" src={ square } alt="" role="presentation"/>
-					<img className="circle2" src={ circle2 } alt="" role="presentation"/>
+					<img className="circle" src={ outline_oval } alt=""/>
+					<img className="triangle spin" src={ triangle } alt=""/>
+					<img className="square spin" src={ square } alt=""/>
+					<img className="circle2" src={ circle2 } alt=""/>
 				</div>
 				<img src={ lucky } alt="Lucky"/>
 		    <p className="header--small-description">unlike most adjectives, i'm also a ux engineer.</p>

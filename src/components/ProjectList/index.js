@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../Project/_Project.scss';
 
 class ProjectList extends React.Component {

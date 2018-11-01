@@ -30,14 +30,14 @@ class Project extends React.Component {
   }
 
   render() {
-    const {title, link, staticSrc, gifSrc, description, onMouseOver} = this.props;
+    const {title, link} = this.props;
     const {isHover} = this.state;
 
     return (
       <li className="project" aria-label={title} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         <a className="project--link" href={link}>
           <article className="project--article">
-            <img src={this.state.imgSrc}/>
+            <img src={this.state.imgSrc} alt=""/>
           </article>
         </a>
         <div>

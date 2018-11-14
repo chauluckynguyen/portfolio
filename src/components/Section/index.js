@@ -9,15 +9,15 @@ class Section extends React.Component  {
 
     var header;
     if (link) {
-      header = <div className="section--header"><h2 className={classNames('section--title', headerClass)}>{ title }</h2><Url url="/page-2" title={ link }/></div>
+      header = <div className="ln-section__header"><h2 className={classNames('ln-section__title', headerClass)}>{ title }</h2><Url url="/page-2" title={ link }/></div>
     } else if (title) {
-      header = <h2 className={classNames('section--title', headerClass)}>{ title }</h2>
+      header = <h2 className={classNames('ln-section__title', headerClass)}>{ title }</h2>
     } else {
       header = null;
     }
 
     return (
-      <section className={classNames('section', className)} id={ id }>
+      <section className={classNames('ln-section', className)} id={ id }>
         { header }
         { this.props.children }
       </section>

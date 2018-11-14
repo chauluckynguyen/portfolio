@@ -23,14 +23,14 @@ class IndexPage extends React.Component {
       <Layout>
       <div>
         <Navigation />
-        <Section className="section__hero">
+        <Section className="ln-section--hero">
           <Header />
         </Section>
         <Section title="work" id="work">
           <ProjectList>
-            <Project title="ServiceNow Design System" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static }/>
-            <Project title="Wonder Plates" link="/wonder-plates" staticSrc={ project3_static } gifSrc={ project3 }/>
-            <Project title="Daily UI Challenge" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 }/>
+            <Project title="servicenow design system" description="spring 2017 internship" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static }/>
+            <Project title="wonder plates" description="ucsd course project" link="/wonder-plates" staticSrc={ project3_static } gifSrc={ project3 }/>
+            <Project title="daily ui challenge" description="personal project" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 }/>
           </ProjectList>
         </Section>
         <Footer/>

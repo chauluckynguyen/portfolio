@@ -2,54 +2,91 @@
 @import '../../required/mixins.scss';
 @import '../../required/colors.scss';
 
-.nav {
+///
+/// Navigation
+///
+/// Index
+/// % ln-nav
+///   @ ln-nav--mobile
+///   @ ln-nav--hidden
+///   @ ln-nav__list
+///   @ ln-nav__list__item
+///   @ ln-nav__icon
+///   @ ln-nav__bars
+///   @ ln-nav__bar
+///   @ ln-nav__bar--1
+///   @ ln-nav__bar--1--rotated
+///   @ ln-nav__bar--2
+///   @ ln-nav__bar--2--expanded
+///   @ ln-nav__bar--3
+///   @ ln-nav__bar--3--rotated
+///
+
+.ln-nav {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: ($space-xxxl * 2) ($space-xxxl * 6) 0;
   width: 100%;
 
-  &__mobile {
+  &--mobile {
     opacity: 1;
 
-  &__hidden {
+  &--hidden {
       opacity: 0;
     }
   }
 
-  &--icon {
-    height: 2rem;
-    width: 2.5rem;
+  &__list {
+    @include reset;
+    list-style: none;
+   
+    &__item {
+      display: inline-block;
+      margin: 0 $space-xxxl 0 0;
+
+      &:last-child {
+        a {
+          font-weight: bold;
+        }
+      }
+    }
   }
 
-  &--bars {
-    height: 2rem;
-    width: 2.5rem;
+  &__icon {
+    height: $space-xl;
+    width: $space-xxl + $space-base; // 2.5rem
+  }
+
+  &__bars {
+    display: flex;
+    justify-content: center;
+    height: $space-xl;
+    width: $space-xxl + $space-base; // 2.5rem
     position: relative;
   }
 
-  &--bar{
+  &__bar{
     background: $color-black;
-    width: 2.4rem;
-    height: 0.2rem;
+    width: $space-xxl;
+    height: $space-xs/2; // 0.2rem
     position: absolute;
 
-    &__1 {
+    &--1 {
       transition: all 200ms ease-in;
 
-      &__rotated {
-        transform: rotate(45deg);
-        top: 0.8rem;
+      &--slide {
+        transform: translateY($space-sm);
       }
     }
 
-    &__2 {
-      top: 0.8rem;
+    &--2 {
+      top: $space-sm;
       transition: all 200ms ease-in;
 
-      &__expanded {
-        top: -65px;
-        left: -500px;
+      &--expanded {
+        top: -6.5rem;
+        left: -50rem;
         height: 100vh;
         width: 100vw;
         background: $color-purple;
@@ -60,31 +97,21 @@
       }
     }
 
-    &__3 {
+    &--3 {
       top: 1.6rem;
       transition: all 200ms ease-in;
 
-      &__rotated {
-        top: 0.8rem;
-        transform: rotate(-45deg);
+      &--slide {
+        transform: translateY(-$space-sm);
       }
     }
 
   }
+}
 
-  &--list {
-    @include reset;
-    list-style: none;
-  }
-
-  &--link {
-    display: inline-block;
-    margin: 0 $space-xxxl 0 0;
-
-    &:last-child {
-      a {
-        font-weight: bold;
-      }
-    }
+/// Mobile
+@media only screen and (max-width: 870px) {
+  .ln-nav {
+    padding: ($space-xxxl * 2) 5rem 0;
   }
 }

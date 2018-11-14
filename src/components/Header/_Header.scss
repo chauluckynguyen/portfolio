@@ -2,7 +2,22 @@
 @import '../../required/variables.scss';
 @import '../../required/mixins.scss';
 
-.header {
+///
+/// Bio
+///
+/// Index
+/// % ln-bio
+///   @ ln-bio__punchline
+///   @ ln-bio__info
+///
+/// Animation
+/// % animated
+/// % animatedFadeInUp
+/// % fadeInUp
+///
+
+/// .ln-bio
+.ln-bio {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -14,112 +29,49 @@
 		margin-bottom: 1rem;
 	}
 
-	&--background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-
-		.circle {
-			position: absolute; 
-			top: 100px;
-			left: -100px;
-		}
-
-		.circle2 {
-			position: absolute; 
-			bottom: 150px;
-			right: 200px;
-		}
-
-		.square{
-			position: absolute; 
-			top: 200px;
-			right: 50px;
-			left: unset;
-
-			&.spin {
-				animation-name: spinning;
-				animation-duration: 12s;
-				animation-iteration-count: infinite;
-				animation-timing-function: ease-in-out;
-			}
-		}
-
-		.triangle {
-			position: absolute; 
-			bottom: 50px;
-			left: 50px; 
-
-
-			&.spin {
-				animation-name: spinning;
-				animation-duration: 12s;
-				animation-iteration-count: infinite;
-				animation-timing-function: ease-in-out;
-			}
-		}
-
-		&.float {
-			animation-name: floating;
-			animation-duration: 6s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease-in-out;
-		}
-		
+	/// .ln-bio__punchline
+	&__punchline {
+		@include reset;
+		margin: 0 0 1rem;
+		text-align: center;
 	}
 
-	&--small-description {
+	/// .ln-bio__info
+	&__info {
 		@include reset;
-		font-weight: 100;
 		margin: 0 0 1rem;
 		text-align: center;
 
 		> span {
-			padding: 0 2rem;
+			padding: 0 $space-xl;
 		}
-	}
+	} 
+}
+
+/// ANIMATIONS
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+	opacity: 0;
+	animation-name: fadeInUp;
 }
 
 @keyframes fadeInUp {
     from {
-        transform: translate3d(0,40px,0)
+      transform: translate3d(0,4rem,0)
     }
 
     to {
-        transform: translate3d(0,0,0);
-        opacity: 1
+			transform: translate3d(0,0,0);
+			opacity: 1
     }
 
  }
-
-    .animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both
-}
-
-.animatedFadeInUp {
-    opacity: 0
-}
-
-.fadeInUp {
-    opacity: 0;
-    animation-name: fadeInUp;
-    -webkit-animation-name: fadeInUp;
-}
-
-@keyframes floating{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 50px);}
-    to {-webkit-transform: translate(0, -0px);    }    
-}
-
-@keyframes spinning{
-	0% {
-	  -webkit-transform: rotate(0deg);
-	}
-	100% {
-	  -webkit-transform: rotate(360deg);
-	} 
-  }

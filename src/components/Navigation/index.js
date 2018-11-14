@@ -33,28 +33,28 @@ class Navigation extends React.Component {
   renderNavigation() {
     if(this.state.windowWidth <= 1050) {
       return (
-        <div className="nav--icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
-          <div className="nav--bars">
-            <div className={"nav--bar nav--bar__1" + (this.state.mobileView ? " nav--bar__1__rotated" : "") }></div>
-            <div className={"nav--bar nav--bar__2" + (this.state.mobileView ? " nav--bar__2__expanded": "")}>
-              <div className={"nav__mobile" + (this.state.mobileView ? "" : " nav__mobile__hidden")}>
-                <ul className="nav--list__mobile">
-                  <li className="nav--link__mobile"><Url url="#work" title="work"/></li>
-                  <li className="nav--link__mobile"><Url url="#resume" title="resume"/></li>
-                  <li className="nav--link__mobile"><Url url="#contact" title="take a chance with me"/></li>
+        <div className="ln-nav__icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
+          <div className="ln-nav__bars">
+            <div className={"ln-nav__bar ln-nav__bar--1" + (this.state.mobileView ? " ln-nav__bar--1--slide" : "") }></div>
+            <div className={"ln-nav__bar ln-nav__bar--2" + (this.state.mobileView ? " ln-nav__bar--2--expanded": "")}>
+              <div className={"ln-nav--mobile" + (this.state.mobileView ? "" : " ln-nav--mobile--hidden")}>
+                <ul className="ln-nav__list--mobile">
+                  <li className="ln-nav__list-item--mobile"><Url url="#work" title="work"/></li>
+                  <li className="ln-nav__list-item--mobile"><Url url="#resume" title="resume"/></li>
+                  <li className="ln-nav__list-item--mobile"><Url url="#contact" title="take a chance with me"/></li>
                 </ul>
               </div>
             </div>
-            <div className={"nav--bar nav--bar__3" + (this.state.mobileView ? " nav--bar__3__rotated" : "") }></div>
+            <div className={"ln-nav__bar ln-nav__bar--3" + (this.state.mobileView ? " ln-nav__bar--3--slide" : "") }></div>
           </div>
         </div>
       )
     } else {
       return (
-        <ul className="nav--list">
-          <li className="nav--link"><Url url="#work" title="work"/></li>
-          <li className="nav--link"><Url url="#resume" title="resume"/></li>
-          <li className="nav--link"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
+        <ul className="ln-nav__list">
+          <li className="ln-nav__list__item"><Url url="#work" title="work"/></li>
+          <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
+          <li className="ln-nav__list__item"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
         </ul>
       )
     }
@@ -62,8 +62,8 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav className="nav" aria-label="Main Navigation" ref={ this.navBar }>
-        <Url className="ln-url__logo" url="/" title="lucky nguyen"/>
+      <nav className="ln-nav" aria-label="Main Navigation" ref={ this.navBar }>
+        <Url className="ln-url--logo" url="/" title="lucky nguyen"/>
         {this.renderNavigation()}
       </nav>
     )

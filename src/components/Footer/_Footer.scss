@@ -2,53 +2,84 @@
 @import '../../required/mixins.scss';
 @import '../../required/colors.scss';
 
-.footer {
+///
+/// Footer
+///
+/// Index
+/// % ln-footer
+///   @ ln-footer__content
+///   @ ln-footer__content-container
+///   @ ln-footer__header
+///   @ ln-footer__list
+///   @ ln-footer__list__item
+///
+
+/// .ln-footer
+.ln-footer {
 	background: $color-pink;
 	bottom: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	z-index: 1;
 	padding: 10rem 19.2rem 10rem;
+	z-index: 1;
 
-	&--content {
-		display: flex;
-		flex: 1 1 50%;
-		justify-content: flex-start;
-		flex-direction: column;
-		padding-right: 20rem;
-
-		
-		&:last-child {
-			flex-direction: row;
-			justify-content: flex-end;
-			padding-right: 0;
-		}
-
-		> p {
-			font-weight: 100;
-			margin-bottom: $space-xxl;
-		}
-
+	/// .ln-footer__content
+	&__content {
 		> img {
 			margin-bottom: $space-xxl;
 			width: fit-content;
 		}
+		
+		> p {
+			margin-bottom: $space-xxl;
+		}
+
+		/// .ln-footer__content-container
+		&-container {
+			display: flex;
+			flex: 1 1 50%;
+			justify-content: flex-start;
+			padding-right: 10rem;
+
+			&:last-child {
+				flex-direction: row;
+				justify-content: flex-end;
+				padding-right: 0;
+			}
+		}
 	}
 
-	&--skills {
+	/// .ln-footer__header
+	&__header {
+		font-weight: bold;
+		margin-bottom: $space-xxl;
+	}
+
+	/// .ln-footer__list
+	&__list {
 		@include reset;
 		list-style: none;
 		padding-right: 5rem;
 
-		&--header {
-			font-weight: bold;
-			margin-bottom: $space-xxl;
-		}
-
-		&--item {
-			font-weight: 100;
+		/// .ln-footer__list__item
+		&__item {
 			margin-bottom: $space-xs;
 		}
 	}
+
+	&__bio {
+		align-items: center;
+		display: flex;
+		margin-bottom: $space-xxl;
+		max-width: 50rem;
+		min-width: 30rem;
+	}
+}
+
+/// Mobile
+@media only screen and (max-width: 870px) {
+  .ln-footer {
+    padding: 10rem 5rem 10rem;
+  }
 }

@@ -2,63 +2,76 @@
 @import '../../required/mixins.scss';
 @import '../../required/colors.scss';
 
-.section {
+///
+/// Section
+///
+/// Index
+/// % ln-nav
+///   @ ln-section--hero
+///   @ ln-section--about
+///   @ ln-section__list
+///   @ ln-section__position
+///   @ ln-section__period
+///   @ ln-section__title
+///   @ ln-section__project--title
+///   @ ln-section__summary
+///   @ ln-section__body
+///   @ ln-section__display
+///   @ ln-section__display-container
+///
+
+/// .ln-section
+.ln-section {
   display: block;
-  min-height: 50.0rem;
-  padding: 10rem ($space-xxxl * 6) 10rem;
+  min-height: 50rem;
+  padding: 10rem ($space-xxxl * 6) 10rem; // 10rem 19.2rem 10rem
   position: relative;
 
   &:first-of-type{
-    padding-top: 2.4rem;
+    padding-top: $space-xxl;
   }
 
   &#work {
     background: $color-white;
   }
 
-  &__hero {
+  /// .ln-section--hero
+  &--hero {
     align-items: center;
     display: flex;
     height: 90vh;
     justify-content: center;
   }
 
-  &__about {
+  /// .ln-section--about
+  &--about {
     background-position: center;
   }
 
-  &--header {
-    align-items: center;
-    display: flex;
-    margin: 0 0 $space-xxl;
-
-    .section--title {
-      margin: 0;
-    }
-  }
-
-  &--position {
-    font-weight: 100;
-    font-size: 1.6rem;
+  /// .ln-section__position
+  &__position {
+    font-size: $space-lg;
     color: $color-gray;
   }
 
-  &--period{
-    font-weight: 100;
-    font-size: 1.2rem;
+  /// .ln-section__period
+  &__period{
+    font-size: $space-md;
     color: $color-gray;
     margin-bottom: $space-xs;
     text-transform: uppercase;
   }
 
-  &--title {
+  /// .ln-section__title
+  &__title {
     @include reset;
     font-size: $font-md;
     font-weight: bold;
     letter-spacing: $space-base;
     margin: 0 0 $space-xl;
 
-    &__project {
+    /// .ln-section__title--project
+    &--project {
       font-size: $font-xxl;
       font-weight: 500;
       margin: 0 0 $space-lg;
@@ -69,66 +82,72 @@
     }
   }
 
-  &--summary {
-    font-weight: 100;
+  /// .ln-section__summary
+  &__summary {
     margin-bottom: $space-xxxl;
   }
 
-  &--body {
-    // font-weight: 100;
-    // margin-bottom: $space-xxl;
-
+  /// .ln-section__body
+  &__body {
     img {
-      padding: 4rem 0;
+      padding: ($space-xl * 2) 0; // 4rem 0
       width: 100%;
     }
   }
 
-  &--display {
+  /// .ln-section__display
+  &__display {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-bottom: $space-xxxl * 2;
+    margin-bottom: $space-xxxl * 2; // 6.4rem
 
-    &--content {
-      flex: 0 0 50%;
+    /// .ln-section__display-container
+    &-container {
+      flex: 1 1 50%;
     }
 
     img {
-      flex: 0 0 50%;
+      flex: 1 1 50%;
       width: 50rem;
     }
   }
 
-  &--grid {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 3.2rem 0;
-    padding: 0;
-    flex-wrap: wrap;
-
-    li {
-      flex: auto;
-      height: 33rem;
-      width: 33rem;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
+  /// .ln-section__skills
+  &__skills {
+    font-weight: bold;
+    margin: $space-xxxl 0 $space-sm;
   }
 
-  &--background {
-    background-color: $color-yellow;
-    height: 40%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+  /// .sn-section__list
+  &__list {
+    @include reset;
+    list-style: none;
+
+    /// .sn-section__list__item
+    &__item {
+
+    }
+  }
+}
+
+/// Mobile
+@media only screen and (max-width: 1200px) {
+  .ln-section {
+    padding: 10rem 5rem 10rem;
+
+    &__display {
+      align-items: baseline;
+      flex-direction: column-reverse;
+
+      > img {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+
+      &-container {
+        margin-top: $space-xxxl;
+      }
+    }
   }
 }

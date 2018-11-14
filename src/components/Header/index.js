@@ -1,41 +1,39 @@
 import React from 'react'
 import './_Header.scss'
-import lucky from '../../images/lucky.svg';
-import outline_oval from '../../images/outline-oval.svg'
-import triangle from '../../images/triangle.svg'
-import square from '../../images/square.svg'
-import circle2 from '../../images/circle2.svg'
+import bioGraphic from '../../images/lucky.svg';
 
 class Header extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { animate: false };
+		this.state = { 
+			animate: false 
+		};
 	}
 
 	componentDidMount() {
 		const TIMEOUT_ANIMATE = 50;
 
 		setTimeout(() => {
-			this.setState({ animate: true });
+			this.setState({ 
+				animate: true 
+			});
 		}, TIMEOUT_ANIMATE);
 	}
 
 	componentWillUnmount() {
-		this.setState({ animate: false });
+		this.setState({ 
+			animate: false 
+		});
 	}
 
 	render(){
+		const {animate} = this.state;
+
 		return (
-		  <div className={"header animated animatedFadeInUp" + (this.state.animate ? " fadeInUp" : "")}>
-				<div className="header--background float">
-					<img className="circle" src={ outline_oval } alt=""/>
-					<img className="triangle spin" src={ triangle } alt=""/>
-					<img className="square spin" src={ square } alt=""/>
-					<img className="circle2" src={ circle2 } alt=""/>
-				</div>
-				<img src={ lucky } alt="Lucky"/>
-		    <p className="header--small-description">unlike most adjectives, i'm also a ux engineer.</p>
-				<p className="header--small-description">currently with servicenow<span>/</span>san diego, ca<span>/</span>chocolate-lover</p>
+		  <div className={"ln-bio animated animatedFadeInUp" + (animate ? " fadeInUp" : "")}>
+				<img src={bioGraphic} alt="Lucky"/>
+		    <p className="ln-bio__punchline">unlike most adjectives, i'm also a ux engineer.</p>
+				<p className="ln-bio__info">currently @ servicenow<span>/</span>san diego, ca<span>/</span>chocolate-lover</p>
 		  </div>
 		)
 	}

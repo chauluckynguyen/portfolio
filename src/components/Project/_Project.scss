@@ -18,7 +18,8 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 $space-xxl ($space-xxxl*2) 0; // 0 2.4rem 6.4rem 0
-  min-width: 15rem;
+  min-height: 30rem;
+  min-width: 30rem;
   padding: 0;
   position: relative;
   text-decoration: none;
@@ -28,11 +29,11 @@
   }
 
   &:nth-child(4n+2) {
-    width: 30rem;
+    width: 50rem;
   }
 
   &:nth-child(4n+3) {
-    width: 50rem;
+    width: 30rem;
   }
 
   &:nth-child(4n+4) {
@@ -75,5 +76,13 @@
       font-size: 1.6rem;
       font-weight: bold;
     }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .ln-project {
+    margin: $space-xxxl 0;
+    min-width: auto;
+    min-height: auto;
   }
 }

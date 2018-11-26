@@ -1,0 +1,28 @@
+@import '../../required/variables.scss';
+@import '../../required/mixins.scss';
+@import '../../required/colors.scss';
+
+.ln-form {
+  &__field {
+    border: 0.1rem solid $color-black;
+    padding: $space-md;
+    margin: 0 0 $space-xl;
+    width: 100%;
+
+    &:hover {
+      border: 0.1rem solid $color-yellow;
+    }
+
+    &:focus {
+      border: 0.1rem solid $color-yellow;
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    border: 0.1rem solid $color-black;
+    padding: $space-md;
+    resize: vertical;
+    width: 100%;
+  }
+}

@@ -17,8 +17,10 @@ class Url extends React.Component  {
 		return (
 			<a
 				className={classNames('ln-url', className)}
-				href={ url } onMouseOver={(e) => {this.handleMouseOver(e)}}
-				onMouseLeave={(e) => {this.handleMouseLeave(e)}}>
+				href={ url } 
+				onMouseOver={(e) => {this.handleMouseOver(e)}}
+				onMouseLeave={(e) => {this.handleMouseLeave(e)}}
+			>
 				{ title }
 				{ this.props.children }
 			</a>

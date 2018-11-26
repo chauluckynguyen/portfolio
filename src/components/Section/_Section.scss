@@ -134,7 +134,7 @@
 /// Mobile
 @media only screen and (max-width: 1200px) {
   .ln-section {
-    padding: 10rem 5rem 10rem;
+    padding: 10rem;
 
     &__display {
       align-items: baseline;
@@ -150,4 +150,10 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 870px) {
+    .ln-section {
+      padding: 10rem 5rem 10rem;
+    }
 }

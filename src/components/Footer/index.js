@@ -40,15 +40,6 @@ class Footer extends React.Component {
 				</div>
 				<div className="ln-footer__content-container">
 					<div className="ln-footer__content">
-						<p className="ln-footer__header">fun facts</p>
-						<ul className="ln-footer__list">
-							<li className="ln-footer__list__item"><p>enfp</p></li>
-							<li className="ln-footer__list__item"><p>gemini</p></li>
-							<li className="ln-footer__list__item"><p>ravenclaw</p></li>
-							<li className="ln-footer__list__item"><p>shiba inu</p></li>
-						</ul>
-					</div>
-					<div className="ln-footer__content">
 						<p className="ln-footer__header">design skills</p>
 						<ul className="ln-footer__list">
 							<li className="ln-footer__list__item"><p>ui design</p></li>

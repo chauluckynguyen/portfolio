@@ -27,25 +27,22 @@ class Navigation extends React.Component {
   }
 
   handleMobile = () => {
-    this.setState( prevState => ({mobileView: !prevState.mobileView }) );
+    document.body.classList.toggle('open');
   }
 
   renderNavigation() {
-    if(this.state.windowWidth <= 1050) {
+    if(this.state.windowWidth <= 1000) {
       return (
         <div className="ln-nav__icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
           <div className="ln-nav__bars">
-            <div className={"ln-nav__bar ln-nav__bar--1" + (this.state.mobileView ? " ln-nav__bar--1--slide" : "") }></div>
-            <div className={"ln-nav__bar ln-nav__bar--2" + (this.state.mobileView ? " ln-nav__bar--2--expanded": "")}>
-              <div className={"ln-nav--mobile" + (this.state.mobileView ? "" : " ln-nav--mobile--hidden")}>
-                <ul className="ln-nav__list--mobile">
-                  <li className="ln-nav__list-item--mobile"><Url url="#work" title="work"/></li>
-                  <li className="ln-nav__list-item--mobile"><Url url="#resume" title="resume"/></li>
-                  <li className="ln-nav__list-item--mobile"><Url url="#contact" title="take a chance with me"/></li>
-                </ul>
-              </div>
-            </div>
-            <div className={"ln-nav__bar ln-nav__bar--3" + (this.state.mobileView ? " ln-nav__bar--3--slide" : "") }></div>
+            <span></span>
+          </div>
+          <div class="menu-background">
+          <ul className="ln-nav__list">
+            <li className="ln-nav__list__item" onClick={ this.removeMobile }><Url url="#work" title="work"/></li>
+            <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
+            <li className="ln-nav__list__item"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
+          </ul>
           </div>
         </div>
       )

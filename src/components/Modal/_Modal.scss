@@ -1,0 +1,79 @@
+@import '../../required/variables.scss';
+@import '../../required/mixins.scss';
+@import '../../required/colors.scss';
+
+.ln-modal {
+  background: $color-white;
+  display: flex;
+  min-height: 50rem;
+  position: fixed;
+  width: 50%;
+  max-width: 75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: $space-xxl;
+
+    > button {
+      background: $color-pink;
+      border: none;
+      border-radius: 50%;
+      height: $space-xxxl;
+      width: $space-xxxl;
+
+      > svg {
+        color: $color-black;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    padding: $space-xxxl;
+
+    &__content {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: $space-xxxl;
+
+    > button {
+      background: $color-gray;
+      border: none;
+      display: inline-block;
+      padding: $space-sm;
+      width: 10rem;
+
+      &:last-of-type {
+        background: $color-pink;
+        margin-left: $space-md;
+      }
+    }
+  }
+}
+
+.ln-modal-container {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+
+  &:first-of-type {
+    align-items: center;
+    background: $color-yellow;
+    justify-content: center;
+  }
+
+  > img {
+    width: 100%;
+  }
+}
+

@@ -29,8 +29,7 @@ class IndexPage extends React.Component {
         <Section title="work" id="work">
           <ProjectList>
             <Project title="servicenow design system" description="spring 2017 internship" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static }/>
-            <Project title="wonder plates" description="ucsd course project" link="/wonder-plates" staticSrc={ project3_static } gifSrc={ project3 }/>
-            <Project title="daily ui challenge" description="personal project" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 }/>
+            <Project title="daily ui challenge" description="personal project" link="https://dribbble.com/lalalaluckyy" staticSrc={ project2_static } gifSrc={ project2 }/>
           </ProjectList>
         </Section>
         <Footer/>

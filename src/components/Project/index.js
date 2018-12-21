@@ -30,15 +30,11 @@ class Project extends React.Component {
 
     return (
       <li className="ln-project" aria-label={title} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-        <a className="ln-project__link" href={link} target="_blank">
+        <a className="ln-project__link" href={link} target="_blank" rel="noopener noreferrer">
           <article className="ln-project__article">
             <img src={this.state.imgSrc} alt=""/>
           </article>
         </a>
-        <div className="ln-project__description">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
       </li>
     )
   }

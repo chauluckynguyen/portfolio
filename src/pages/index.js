@@ -12,8 +12,6 @@ import project1 from '../images/graphic1.gif'
 import project1_static from '../images/graphic1static.png'
 import project2 from '../images/graphic2.gif'
 import project2_static from '../images/graphic2static.png'
-import project3 from '../images/graphic3.gif'
-import project3_static from '../images/graphic3static.png'
 
 import "@ibm/type/css/ibm-type.min.css"
 
@@ -23,13 +21,11 @@ class IndexPage extends React.Component {
       <Layout>
       <div>
         <Navigation />
-        <Section className="ln-section--hero">
-          <Header />
-        </Section>
-        <Section title="work" id="work">
+        <Header/>
+        <Section title="my work" id="work">
           <ProjectList>
             <Project title="servicenow design system" description="spring 2017 internship" link="/servicenow-homepage" gifSrc={ project1 } staticSrc={ project1_static }/>
-            <Project title="daily ui challenge" description="personal project" link="https://dribbble.com/lalalaluckyy" staticSrc={ project2_static } gifSrc={ project2 }/>
+            <Project title="daily ui challenge" description="personal project" link="/daily-ui" staticSrc={ project2_static } gifSrc={ project2 }/>
           </ProjectList>
         </Section>
         <Footer/>

@@ -25,27 +25,23 @@
 	position: relative;
 	width: 100%;
 
-	img {
-		margin-bottom: 1rem;
+	&__heading {
+		color: #3B4763;
+		font-family: 'Hind', sans-serif;
+		font-size: $font-xxl * 2;
+		font-weight: 700;
+		line-height: 1.1;
+
+		> span {
+			color: #54d9be;
+		}
 	}
 
 	/// .ln-bio__punchline
 	&__punchline {
 		@include reset;
 		margin: 0 0 1rem;
-		text-align: center;
 	}
-
-	/// .ln-bio__info
-	&__info {
-		@include reset;
-		margin: 0 0 1rem;
-		text-align: center;
-
-		> span {
-			padding: 0 $space-xl;
-		}
-	} 
 }
 
 /// ANIMATIONS
@@ -62,6 +58,48 @@
 .fadeInUp {
 	opacity: 0;
 	animation-name: fadeInUp;
+}
+
+.ln-btn {
+	font-family: 'Hind', sans-serif;
+	border-radius: 2.0rem;
+	cursor: pointer;
+	font-weight: 700;
+	padding: $space-sm $space-xl;
+	font-size: $font-sm;
+	margin-top: $space-lg;
+	border: ($space-base * 2) solid $color-gray;
+	position: relative;
+	transition: all 0.2s linear 0s;
+	width: 20rem;
+	background: #54d9be;
+	border: none;
+	width: 17rem;
+
+	&:before {
+    content: "\1F4E9";
+    font-family: FontAwesome;
+    font-size: $font-sm;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+	}
+	
+	&:hover {
+		text-indent: -20px;
+    
+    &:before {
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
 }
 
 @keyframes fadeInUp {

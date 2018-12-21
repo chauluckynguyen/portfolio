@@ -49,9 +49,15 @@
 	}
 
 	/// .ln-footer__header
-	&__header {
-		font-weight: bold;
+	&__heading {
+		font-family: 'Hind', sans-serif;
+		font-weight: 700;
+		font-size: $font-lg;
 		margin-bottom: $space-xxl;
+		
+		> span {
+			color: #54d9be;
+		}
 	}
 
 	/// .ln-footer__list
@@ -96,10 +102,6 @@
 				&:last-child {
 					flex-direction: column;
 					padding: 0;
-				}
-
-				.ln-avatar {
-					margin: 0 0 $space-xxl;
 				}
 			}
 		}

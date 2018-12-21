@@ -1,40 +1,43 @@
 import React from 'react'
 import './_Header.scss'
-import bioGraphic from '../../images/lucky.svg';
+import '../Section/_Section.scss'
 
 class Header extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { 
-			animate: false 
-		};
-	}
+	state = { animate: false }
 
 	componentDidMount() {
-		const TIMEOUT_ANIMATE = 50;
+		const TIMEOUT_ANIMATE = 50
 
-		setTimeout(() => {
+		this.timer = setTimeout(() => {
 			this.setState({ 
 				animate: true 
 			});
-		}, TIMEOUT_ANIMATE);
+		}, TIMEOUT_ANIMATE)
 	}
 
 	componentWillUnmount() {
-		this.setState({ 
-			animate: false 
-		});
+		clearInterval(this.timer)
+		this.setState({
+			animate: false
+		})
 	}
 
 	render(){
-		const {animate} = this.state;
+		const { animate } = this.state
 
 		return (
-		  <div className={"ln-bio animated animatedFadeInUp" + (animate ? " fadeInUp" : "")}>
-				<img src={bioGraphic} alt="Lucky"/>
-		    <p className="ln-bio__punchline">unlike most adjectives, i'm also a ux engineer.</p>
-				<p className="ln-bio__info">currently @ servicenow<span>/</span>san diego, ca<span>/</span>chocolate-lover</p>
-		  </div>
+			<section className="ln-section ln-section--hero">
+				<div className={"ln-bio animated animatedFadeInUp" + (animate ? " fadeInUp" : "")}>
+					<h1 className="ln-bio__heading">
+						hi there! i'm <span>lucky</span><br/>
+						unlike most adjectives, <br/>
+						i'm also a ux engineer.
+					</h1>
+					<p className="ln-bio__punchline">
+						( Another fun fact: I'm very bad at puns. 🤣 ) 
+					</p>
+				</div>
+			</section>
 		)
 	}
 }

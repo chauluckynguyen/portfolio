@@ -14,27 +14,37 @@
 /// .ln-url
 .ln-url {
 	color: $color-gray;
-	font-size: $font-sm;
 	position: relative;
 	text-decoration: none;
 
 	&::before {
-		background: $color-black;
+		background: $color-teal;
 		bottom: 0;
 		content: '';
 		display: inline-block;
 		height: $space-xs/2; // 0.2rem
 		right: 0;
-		margin: 0 0 (-$space-sm);
+		margin: 0 0 (-$space-xs);
 		position: absolute;
 		transition: width 0.2s ease;
 		vertical-align: middle;
 		width: 0;
 	}
 
+	&::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+		height: 0;
+		margin-top: -0.1rem;
+    overflow: hidden;
+    visibility: hidden;
+}
+
 	&:hover,
 	&.is-hover {
 		color: $color-black;
+		font-weight: bold;
 
 		&::before {
 			width: 100%;

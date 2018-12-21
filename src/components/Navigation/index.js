@@ -40,8 +40,8 @@ class Navigation extends React.Component {
           <div class="menu-background">
           <ul className="ln-nav__list">
             <li className="ln-nav__list__item" onClick={ this.removeMobile }><Url url="#work" title="work"/></li>
+            <li className="ln-nav__list__item"><Url url="#about" title="about"/></li>
             <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
-            <li className="ln-nav__list__item"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
           </ul>
           </div>
         </div>
@@ -50,8 +50,8 @@ class Navigation extends React.Component {
       return (
         <ul className="ln-nav__list">
           <li className="ln-nav__list__item"><Url url="#work" title="work"/></li>
+          <li className="ln-nav__list__item"><Url url="#about" title="about"/></li>
           <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
-          <li className="ln-nav__list__item"><Url url="mailto:luckyknguyen@gmail.com" title="take a chance with me"/></li>
         </ul>
       )
     }

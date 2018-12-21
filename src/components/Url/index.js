@@ -20,6 +20,7 @@ class Url extends React.Component  {
 				href={ url } 
 				onMouseOver={(e) => {this.handleMouseOver(e)}}
 				onMouseLeave={(e) => {this.handleMouseLeave(e)}}
+				title={title}
 			>
 				{ title }
 				{ this.props.children }

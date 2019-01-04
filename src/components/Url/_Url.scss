@@ -14,6 +14,7 @@
 /// .ln-url
 .ln-url {
 	color: $color-gray;
+	font-size: $font-md;
 	position: relative;
 	text-decoration: none;
 
@@ -42,9 +43,10 @@
 }
 
 	&:hover,
-	&.is-hover {
+	&:focus {
 		color: $color-black;
 		font-weight: bold;
+		outline: none;
 
 		&::before {
 			width: 100%;
@@ -52,47 +54,43 @@
 		}
 	}
 
-	/// .ln-url--contrast
-	&--contrast {
-		color: $color-purple;
+	&.-sm {
+		font-size: 1.8rem;
 	}
 
-	/// .ln-url--logo
-	&--logo {
-		font-weight: bold;
-		letter-spacing: $space-xs/2; // 0.2rem
+	&.-jump {
 		text-decoration: none;
+
+		&::before,
+		&::after {
+			content: none;
+		}
+
+		&:hover {
+			color: $color-teal;
+		}
+
+		> span {
+			font-size: $font-xxl * 2;
+
+			&::before {
+				content: "\f107";
+				font-family: FontAwesome;
+			}
+		}
 	}
 
-	/// .ln-url--social
-	&--social {
-		color: $color-gray;
-		font-size: $space-xxxl;
-		margin-right: $space-md;
+	&.-contrast {
+		color: $color-teal;
 
-		&:last-of-type {
-			margin-right: 0;
+		&::before,
+		&::after {
+			content: none;
 		}
 
-		&::before {
-			display: none;
-		}
-
+		&:hover,
 		&:focus {
-			color: $color-white;
-			outline: none;
-		}
-
-		&.is-medium:hover {
-			color: #3FF28C;
-		}
-
-		&.is-linkedin:hover {
-			color: #1174AD;
-		}
-
-		&.is-github:hover {
-			color: #99D3E8;
+			color: $color-teal;
 		}
 	}
 }

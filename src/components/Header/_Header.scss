@@ -3,12 +3,12 @@
 @import '../../required/mixins.scss';
 
 ///
-/// Bio
+/// Header
 ///
 /// Index
-/// % ln-bio
-///   @ ln-bio__punchline
-///   @ ln-bio__info
+/// % ln-header
+///   @ ln-header__heading
+///   @ ln-header__subheading
 ///
 /// Animation
 /// % animated
@@ -16,8 +16,8 @@
 /// % fadeInUp
 ///
 
-/// .ln-bio
-.ln-bio {
+/// .ln-header
+.ln-header {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -25,27 +25,34 @@
 	position: relative;
 	width: 100%;
 
-	&__heading {
-		color: #3B4763;
+	&.-jump {
+		align-items: center;
+		animation: jump 600ms linear alternate infinite;
+		height: auto;
+		margin: ($space-xxxl * 2) 0 (-$space-xxxl) 0;
+	}
+
+	/// .ln-header-heading
+	&-heading {
+		color: $color-text;
 		font-family: 'Hind', sans-serif;
 		font-size: $font-xxl * 2;
 		font-weight: 700;
 		line-height: 1.1;
 
 		> span {
-			color: #54d9be;
+			color: $color-teal;
 		}
 	}
 
-	/// .ln-bio__punchline
-	&__punchline {
+	/// .ln-header-subheading
+	&-subheading {
 		@include reset;
 		margin: 0 0 1rem;
 	}
 }
 
 /// ANIMATIONS
-
 .animated {
 	animation-duration: 1s;
 	animation-fill-mode: both;
@@ -60,48 +67,6 @@
 	animation-name: fadeInUp;
 }
 
-.ln-btn {
-	font-family: 'Hind', sans-serif;
-	border-radius: 2.0rem;
-	cursor: pointer;
-	font-weight: 700;
-	padding: $space-sm $space-xl;
-	font-size: $font-sm;
-	margin-top: $space-lg;
-	border: ($space-base * 2) solid $color-gray;
-	position: relative;
-	transition: all 0.2s linear 0s;
-	width: 20rem;
-	background: #54d9be;
-	border: none;
-	width: 17rem;
-
-	&:before {
-    content: "\1F4E9";
-    font-family: FontAwesome;
-    font-size: $font-sm;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    height: 100%;
-    width: 40px;
-    transition: all 0.2s linear 0s;
-	}
-	
-	&:hover {
-		text-indent: -20px;
-    
-    &:before {
-      opacity: 1;
-      text-indent: 0px;
-    }
-  }
-}
-
 @keyframes fadeInUp {
     from {
       transform: translate3d(0,4rem,0)
@@ -111,5 +76,30 @@
 			transform: translate3d(0,0,0);
 			opacity: 1
     }
-
  }
+
+ @keyframes jump {
+	 from {
+		 transform: translate3d(0, 0, 0)
+	 }
+
+	 to {
+		 transform: translate3d(0, 2rem, 0)
+	 }
+ }
+
+@media only screen and (max-width: 1200px) {
+	.ln-header {
+		&-heading {
+			font-size: 5.5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 870px) {
+	.ln-header {
+		&-heading {
+			font-size: 4rem;
+		}
+	}
+}

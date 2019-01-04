@@ -12,15 +12,24 @@ class Url extends React.Component  {
 	}
 
 	render() {
-		const { url, title, className } = this.props;
+		const { url, title, className, size, type, isNewTab } = this.props;
+		const urlClass = classNames(
+			className,
+			{
+				'ln-url': true,
+				[`-${size}`]: size,
+				[`-${type}`]: type
+			}
+		)
 
 		return (
 			<a
-				className={classNames('ln-url', className)}
+				className={ urlClass }
 				href={ url } 
 				onMouseOver={(e) => {this.handleMouseOver(e)}}
 				onMouseLeave={(e) => {this.handleMouseLeave(e)}}
 				title={title}
+				target={isNewTab ? "_blank" : null}
 			>
 				{ title }
 				{ this.props.children }

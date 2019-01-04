@@ -17,7 +17,9 @@ const TemplateWrapper = ({ children }) => (
               { name: 'keywords', content: 'sample, something' },
               { name: 'viewport', content:'width=device-width, initial-scale=1' }
             ]}
-          />
+          >
+            <html lang="en" />
+          </Helmet>
           <div className="root">
             {children}
           </div>

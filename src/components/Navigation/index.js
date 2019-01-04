@@ -1,6 +1,15 @@
-import React from 'react';
-import './_Navigation.scss';
-import Url from '../Url/index';
+import React from 'react'
+
+// Components
+import Url from '../Url/index'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Scrollchor from 'react-scrollchor'
+
+// Styles
+import './_Navigation.scss'
+
+// Assets
+import logo from '../../images/logo.svg'
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -33,25 +42,24 @@ class Navigation extends React.Component {
   renderNavigation() {
     if(this.state.windowWidth <= 1000) {
       return (
-        <div className="ln-nav__icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
-          <div className="ln-nav__bars">
+        <div className="ln-nav-icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
+          <div className="ln-nav-bars">
             <span></span>
           </div>
-          <div class="menu-background">
-          <ul className="ln-nav__list">
-            <li className="ln-nav__list__item" onClick={ this.removeMobile }><Url url="#work" title="work"/></li>
-            <li className="ln-nav__list__item"><Url url="#about" title="about"/></li>
-            <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
+          <div class="ln-nav-bg">
+          <ul className="ln-nav-list">
+            <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="">home</Scrollchor></li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}><Url url="https://drive.google.com/file/d/16gbrgcmvCOcdzoxwozBRLu3_duk_kOVJ/view?usp=sharing" title="resume"/></li>
           </ul>
           </div>
         </div>
       )
     } else {
       return (
-        <ul className="ln-nav__list">
-          <li className="ln-nav__list__item"><Url url="#work" title="work"/></li>
-          <li className="ln-nav__list__item"><Url url="#about" title="about"/></li>
-          <li className="ln-nav__list__item"><Url url="#resume" title="resume"/></li>
+        <ul className="ln-nav-list">
+          <li className="ln-nav-list-item"><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
+          <li className="ln-nav-list-item"><Url url="https://drive.google.com/file/d/16gbrgcmvCOcdzoxwozBRLu3_duk_kOVJ/view?usp=sharing" title="resume" isNewTab={true}/></li>
         </ul>
       )
     }
@@ -59,8 +67,14 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav className="ln-nav" aria-label="Main Navigation" ref={ this.navBar }>
-        <Url className="ln-url--logo" url="/" title="lucky nguyen"/>
+      <nav className="ln-nav" aria-label="Main Navigation" ref={this.navBar}>
+        <a href="/">
+          <img 
+            className="ln-nav-logo" 
+            src={logo} 
+            alt="Lucky's Logo" 
+          />
+        </a>
         {this.renderNavigation()}
       </nav>
     )

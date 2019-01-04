@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// Styles
 import './_Project.scss';
 
 class Project extends React.Component {
@@ -30,9 +32,11 @@ class Project extends React.Component {
 
     return (
       <li className="ln-project" aria-label={title} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-        <a className="ln-project__link" href={link} target="_blank" rel="noopener noreferrer">
-          <article className="ln-project__article">
+        <a className="ln-project-link" href={link} aria-label={ title }>
+          <article className="ln-project-article">
             <img src={this.state.imgSrc} alt=""/>
+            <h2>{title}</h2>
+            <p>{description}</p>
           </article>
         </a>
       </li>

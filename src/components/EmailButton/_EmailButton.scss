@@ -1,0 +1,47 @@
+@import '../../required/colors.scss';
+@import '../../required/variables.scss';
+@import '../../required/mixins.scss';
+
+.ln-btn {
+	background: $color-teal;
+	border-radius: 2.0rem;
+	color: $color-black;
+	display: inline-block;
+	font-family: 'Hind', sans-serif;
+	font-size: $font-sm;
+	font-weight: 700;
+	margin-top: $space-lg;
+	position: relative;
+	padding: $space-sm $space-xl;
+	transition: all 0.2s linear 0s;
+	text-decoration: none;
+	width: 17rem;
+
+	&:before {
+		align-items: center;
+		content: "\1F4E9";
+		display: none;
+    font-family: FontAwesome;
+    font-size: $font-sm;
+    position: absolute;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s;
+	}
+	
+	&:hover,
+	&:focus {
+		outline: none;
+		text-indent: -1.5rem;
+    
+    &::before {
+			display: flex;
+      opacity: 1;
+      text-indent: 0px;
+    }
+  }
+}

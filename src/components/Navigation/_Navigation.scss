@@ -7,21 +7,16 @@
 ///
 /// Index
 /// % ln-nav
-///   @ ln-nav--mobile
-///   @ ln-nav--hidden
-///   @ ln-nav__list
-///   @ ln-nav__list__item
-///   @ ln-nav__icon
-///   @ ln-nav__bars
-///   @ ln-nav__bar
-///   @ ln-nav__bar--1
-///   @ ln-nav__bar--1--rotated
-///   @ ln-nav__bar--2
-///   @ ln-nav__bar--2--expanded
-///   @ ln-nav__bar--3
-///   @ ln-nav__bar--3--rotated
+///   @ ln-nav-logo
+///   @ ln-nav-list
+///   @ ln-nav-list-item
+///   @ ln-nav-icon
+///   @ ln-nav-bars
+///
+/// Media Queries
 ///
 
+/// .ln-nav
 .ln-nav {
   align-items: center;
   display: flex;
@@ -29,23 +24,23 @@
   padding: ($space-xxxl * 2) ($space-xxxl * 6) 0;
   width: 100%;
 
-  &--mobile {
-    opacity: 1;
-
-  &--hidden {
-      opacity: 0;
-    }
+  /// .ln-nav-logo
+  &-logo {
+    height: 7rem;
+    width: 7rem;
   }
 
-  &__list {
+  /// .ln-nav-list
+  &-list {
     @include reset;
     list-style: none;
 
     .open & {
       display: block;
     }
-   
-    &__item {
+    
+    /// .ln-nav-list-item
+    &-item {
       display: inline-block;
       margin: 0 $space-xxxl 0 0;
 
@@ -66,12 +61,8 @@
     }
   }
 
-  &__icon {
-    height: $space-xl;
-    width: $space-xxl + $space-base; // 2.5rem
-  }
-
-  .menu-background {
+  /// .ln-nav-bg
+  &-bg {
     align-items: center;
     background-color: $color-white;
     bottom: 0;
@@ -91,8 +82,15 @@
       visibility: visible;
     }
   }
+  
+  /// .ln-nav-icon
+  &-icon {
+    height: $space-xl;
+    width: $space-xxl + $space-base; // 2.5rem
+  }
 
-  &__bars {
+  /// .ln-nav-bars
+  &-bars {
     height: $space-xl;
     width: $space-xxl + $space-base; // 2.5rem
     position: relative;
@@ -140,7 +138,7 @@
 
       &::before,
       &::after {
-        background-color: $color-purple;
+        background-color: $color-teal;
         transition: top 0.3s, bottom 0.3s, transform 0.3s 0.3s;
       }
 
@@ -157,7 +155,7 @@
   }
 }
 
-/// Mobile
+// Media Queries
 @media only screen and (max-width: 1200px) {
   .ln-nav {
     padding: ($space-xxxl * 2) 10rem 0;
@@ -166,10 +164,16 @@
 
 @media only screen and (max-width: 870px) {
   .ln-nav {
-    padding: ($space-xxxl * 2) 5rem 0;
-    
-    &__list {
+    padding: 2rem 2rem;
+
+    &-logo {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    &-list {
       display: none;
     }
   }
 }
+

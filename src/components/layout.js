@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import '../layouts/index.scss'
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistor, store } from '../store'; 
-
 import "./layout.css"
 
 const TemplateWrapper = ({ children }) => (

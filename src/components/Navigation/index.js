@@ -14,12 +14,16 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = { 
+      windowWidth: 9999,
+      mobileView: false 
+    };
+
     this.handleResize = this.handleResize.bind(this);
     this.renderNavigation = this.renderNavigation.bind(this);
     this.handleMobile = this.handleMobile.bind(this);
     this.mobileNav = React.createRef();
     this.navBar = React.createRef();
-    this.state = { windowWidth: window.innerWidth, mobileView: false };
   }
 
   componentDidMount() {
@@ -45,7 +49,7 @@ class Navigation extends React.Component {
           <div className="ln-nav-bars">
             <span></span>
           </div>
-          <div class="ln-nav-bg">
+          <div className="ln-nav-bg">
           <ul className="ln-nav-list">
             <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="">home</Scrollchor></li>
             <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>

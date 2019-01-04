@@ -53,7 +53,7 @@ class Navigation extends React.Component {
           <ul className="ln-nav-list">
             <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="">home</Scrollchor></li>
             <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
-            <li className="ln-nav-list-item" onClick={this.removeMobile}><Url url="https://drive.google.com/file/d/16gbrgcmvCOcdzoxwozBRLu3_duk_kOVJ/view?usp=sharing" title="resume"/></li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}><Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume"/></li>
           </ul>
           </div>
         </div>
@@ -62,7 +62,7 @@ class Navigation extends React.Component {
       return (
         <ul className="ln-nav-list">
           <li className="ln-nav-list-item"><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
-          <li className="ln-nav-list-item"><Url url="https://drive.google.com/file/d/16gbrgcmvCOcdzoxwozBRLu3_duk_kOVJ/view?usp=sharing" title="resume" isNewTab={true}/></li>
+          <li className="ln-nav-list-item"><Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume" isNewTab={true}/></li>
         </ul>
       )
     }

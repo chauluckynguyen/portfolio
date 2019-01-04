@@ -2,7 +2,6 @@ import React from 'react'
 
 // Components
 import Url from '../Url/index'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Scrollchor from 'react-scrollchor'
 
 // Styles

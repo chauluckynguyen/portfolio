@@ -7,14 +7,24 @@ class EmailButton extends React.Component {
     super(props)
 
     this.handleClick = this.handleClick.bind(this)
+    this.buttonRef = React.createRef()
+  }
+
+  componentDidMount() {
+    this.buttonRef.current.addEventListener('click', this.handleClick)
+  }
+
+  componentWillUnmount() {
+    this.buttonRef.current.removeEventListener('click', this.handleClick)
   }
 
   handleClick() {
-    if (window) window.location.href = "mailto:luckyknguyen@gmail.com"
+    window.location.href = "mailto:luckyknguyen@gmail.com"
   }
+
   render() {
     return (
-      <button className="ln-btn" onClick={() => this.handleClick()}>drop a message</button>
+      <button ref={this.buttonRef} className="ln-btn">drop a message</button>
     )
   }
 }

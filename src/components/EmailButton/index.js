@@ -10,7 +10,7 @@ class EmailButton extends React.Component {
   }
 
   handleClick() {
-    window.location.href = "mailto:luckyknguyen@gmail.com"
+    if (window) window.location.href = "mailto:luckyknguyen@gmail.com"
   }
   render() {
     return (

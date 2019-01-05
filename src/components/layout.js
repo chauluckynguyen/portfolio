@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }) => (
       <PersistGate loading={null} persistor={persistor}>
         <div>
           <Helmet
-            title="Gatsby Default Starter"
+            title="Lucky Nguyen"
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },

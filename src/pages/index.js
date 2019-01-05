@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
       <div>
-        <Navigation />
+        <Navigation isPink={true}/>
           <Header/>
           <Section title="my work" id="work">
             <ProjectList>

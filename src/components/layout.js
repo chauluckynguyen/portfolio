@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistor, store } from '../store'; 
-import "./layout.css"
+import "./layout.scss"
 
 const TemplateWrapper = ({ children }) => (
   <Provider store={store}>

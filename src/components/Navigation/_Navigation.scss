@@ -24,6 +24,10 @@
   padding: ($space-xxxl * 2) ($space-xxxl * 6) 0;
   width: 100%;
 
+  &.-contrast {
+    background: $color-pink;
+  }
+
   /// .ln-nav-logo
   &-logo {
     height: 7rem;

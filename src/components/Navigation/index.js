@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames';
 
 // Components
 import Url from '../Url/index'
@@ -69,8 +70,15 @@ class Navigation extends React.Component {
   }
 
   render() {
+    const { isPink } = this.props 
+
+    const navClass = classNames({
+      'ln-nav': true, 
+      '-contrast': isPink
+    })
+
     return (
-      <nav className="ln-nav" aria-label="Main Navigation" ref={this.navBar}>
+      <nav className={navClass} aria-label="Main Navigation" ref={this.navBar}>
         <a href="/">
           <img 
             className="ln-nav-logo" 

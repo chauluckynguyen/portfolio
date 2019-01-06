@@ -68,7 +68,7 @@ class Navigation extends React.Component {
               }
             </li>
             <li className="ln-nav-list-item" onClick={this.removeMobile}>
-              <Url url="https://drive.google.com/file/d/1mPdUD47ZdwwROSri6nSN4wlq2GOjTSjz/view?usp=sharing" title="resume"/>
+              <Url url="https://drive.google.com/file/d/1f7FpN-1m-B9WBlRv8NxJveMIKCGM_CoD/view?usp=sharing" title="resume"/>
             </li>
           </ul>
           </div>
@@ -84,7 +84,7 @@ class Navigation extends React.Component {
             }
           </li>
           <li className="ln-nav-list-item">
-            <Url url="https://drive.google.com/file/d/1mPdUD47ZdwwROSri6nSN4wlq2GOjTSjz/view?usp=sharing" title="resume" isNewTab={true}/>
+            <Url url="https://drive.google.com/file/d/1f7FpN-1m-B9WBlRv8NxJveMIKCGM_CoD/view?usp=sharing" title="resume" isNewTab={true}/>
           </li>
         </ul>
       )

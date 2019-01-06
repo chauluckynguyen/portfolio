@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 
 // Styles
-import '../Project/_Project.scss';
+import '../Project/_Project.scss'
 
 class ProjectList extends React.Component {
   render() {
     return (
       <ul className="ln-project-list">
-        { this.props.children }
+        {this.props.children}
       </ul>
     )
   }
 }
 
-export default ProjectList;
+export default ProjectList

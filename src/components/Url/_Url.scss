@@ -6,9 +6,12 @@
 ///
 /// Index
 /// % ln-url
-///   @ ln-url--contrast
-///   @ ln-url--logo
-///   @ ln-url--social
+///   @ -sm
+///   @ -jump-down
+///   @ -jump-up
+///		@ -contrast
+/// 
+/// Animations
 ///
 
 /// .ln-url
@@ -17,6 +20,80 @@
 	font-size: $font-md;
 	position: relative;
 	text-decoration: none;
+
+	/// .ln-url .-sm
+	&.-sm {
+		font-size: $font-default;
+	}
+
+	/// .ln-url .-jump-down
+	&.-jump-down {
+		text-decoration: none;
+
+		&::before,
+		&::after {
+			content: none;
+		}
+
+		&:hover {
+			color: $color-teal;
+		}
+
+		> span {
+			background: center / cover no-repeat url('../../images/chevron-down.svg');
+			display: block;
+			height: $space-xl * 2; // 4rem
+			width: $space-xl * 2; // 4rem
+
+			&:hover {
+				background: center / cover no-repeat url('../../images/chevron-down-hover.svg');
+			}
+		}
+	}
+
+	/// .ln-url .-jump-up
+	&.-jump-up {
+		bottom: $space-xl * 2; // 4rem
+		opacity: 1;
+		position: fixed;
+		right: $space-xl * 2; // 4rem
+		text-decoration: none;
+
+		&::before,
+		&::after {
+			content: none;
+		}
+
+		&:hover {
+			color: $color-teal;
+		}
+
+		> span {
+			background: center / cover no-repeat url('../../images/chevron-up.svg');
+			display: block;
+			height: $space-xl * 2; // 4rem
+			width: $space-xl * 2; // 4rem
+
+			&:hover {
+				background: center / cover no-repeat url('../../images/chevron-up-hover.svg');
+			}
+		}
+	}
+
+	/// .ln-url .-contrast
+	&.-contrast {
+		color: $color-teal;
+
+		&::before,
+		&::after {
+			content: none;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-teal;
+		}
+	}
 
 	&::before {
 		background: $color-teal;
@@ -40,7 +117,7 @@
 		margin-top: -0.1rem;
     overflow: hidden;
     visibility: hidden;
-}
+	}
 
 	&:hover,
 	&:focus {
@@ -54,43 +131,33 @@
 		}
 	}
 
-	&.-sm {
-		font-size: 1.8rem;
+	&.fadeIn {
+		animation: fadeIn 250ms linear forwards;
 	}
 
-	&.-jump {
-		text-decoration: none;
+	&.fadeOut {
+		animation: fadeOut 250ms linear forwards;
+	}
+}
 
-		&::before,
-		&::after {
-			content: none;
-		}
 
-		&:hover {
-			color: $color-teal;
-		}
-
-		> span {
-			font-size: $font-xxl * 2;
-
-			&::before {
-				content: "\f107";
-				font-family: FontAwesome;
-			}
-		}
+/// ANIMATIONS
+@keyframes fadeIn {
+	from {
+		opacity: 0;
 	}
 
-	&.-contrast {
-		color: $color-teal;
+  to {
+		opacity: 1;
+	}
+}
 
-		&::before,
-		&::after {
-			content: none;
-		}
-
-		&:hover,
-		&:focus {
-			color: $color-teal;
-		}
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	
+  to {
+		opacity: 0;
 	}
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Styles
 import './_EmailButton.scss'
 
 class EmailButton extends React.Component {
@@ -24,7 +25,9 @@ class EmailButton extends React.Component {
 
   render() {
     return (
-      <button ref={this.buttonRef} className="ln-btn">drop a message</button>
+      <button ref={this.buttonRef} className="ln-btn">
+        drop a message
+      </button>
     )
   }
 }

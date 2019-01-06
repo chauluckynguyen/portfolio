@@ -10,6 +10,7 @@
 ///   @ ln-project-list
 ///   @ ln-project-link
 ///
+/// Media Queries
 
 /// .ln-project
 .ln-project {
@@ -83,7 +84,7 @@
   }
 }
 
-// Media Queries
+// MEDIA QUERIES
 @media only screen and (max-width: 870px) {
   .ln-project {
     margin: $space-xxxl 0;

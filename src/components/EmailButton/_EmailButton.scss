@@ -2,9 +2,17 @@
 @import '../../required/variables.scss';
 @import '../../required/mixins.scss';
 
+///
+/// EmailButon
+///
+/// Index
+/// % ln-btn
+///
+
+/// .ln-btn
 .ln-btn {
 	background: $color-teal;
-	border-radius: 2.0rem;
+	border-radius: $font-xl;
 	color: $color-black;
 	display: inline-block;
 	font-family: 'Hind', sans-serif;
@@ -15,9 +23,9 @@
 	padding: $space-sm $space-xl;
 	transition: all 0.2s linear 0s;
 	text-decoration: none;
-	width: 17rem;
+	width: 18rem; 
 
-	&:before {
+	&::before {
 		align-items: center;
 		content: "\1F4E9";
 		display: none;
@@ -25,11 +33,10 @@
     font-size: $font-sm;
     position: absolute;
     justify-content: center;
-    right: 0;
+    right: $space-md;
     top: 0;
     opacity: 0;
     height: 100%;
-    width: 40px;
     transition: all 0.2s linear 0s;
 	}
 	

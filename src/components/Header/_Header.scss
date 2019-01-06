@@ -7,13 +7,16 @@
 ///
 /// Index
 /// % ln-header
-///   @ ln-header__heading
-///   @ ln-header__subheading
+///		@ -jump
+///   @ ln-header-heading
+///   @ ln-header-subheading
 ///
 /// Animation
 /// % animated
 /// % animatedFadeInUp
 /// % fadeInUp
+///
+/// Media Queries
 ///
 
 /// .ln-header
@@ -25,11 +28,12 @@
 	position: relative;
 	width: 100%;
 
+	/// .ln-header .-jump
 	&.-jump {
 		align-items: center;
 		animation: jump 600ms linear alternate infinite;
 		height: auto;
-		margin: ($space-xxxl * 2) 0 (-$space-xxxl) 0;
+		margin: ($space-xxxl * 2) 0 ($space-xxxl) 0;
 	}
 
 	/// .ln-header-heading
@@ -88,10 +92,15 @@
 	 }
  }
 
+ // MEDIA QUERIES
 @media only screen and (max-width: 1200px) {
 	.ln-header {
 		&-heading {
 			font-size: 5.5rem;
+		}
+
+		&.-jump {
+			margin: ($space-xxxl * 2) 0 0 0;
 		}
 	}
 }
@@ -100,6 +109,10 @@
 	.ln-header {
 		&-heading {
 			font-size: 4rem;
+		}
+
+		&.-jump {
+			margin: ($space-xxxl * 2) 0 0 0;
 		}
 	}
 }

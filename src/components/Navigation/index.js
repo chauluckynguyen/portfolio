@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
+import PropTypes from 'prop-types'
 
 // Components
 import Url from '../Url/index'
@@ -44,17 +45,31 @@ class Navigation extends React.Component {
   }
 
   renderNavigation() {
+    const { isHome } = this.props 
+
     if(this.state.windowWidth <= 1000) {
       return (
-        <div className="ln-nav-icon" ref={ this.mobileNav } onClick={ this.handleMobile }>
+        <div className="ln-nav-icon" ref={this.mobileNav} onClick={this.handleMobile}>
           <div className="ln-nav-bars">
             <span></span>
           </div>
           <div className="ln-nav-bg">
           <ul className="ln-nav-list">
-            <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="">home</Scrollchor></li>
-            <li className="ln-nav-list-item" onClick={this.removeMobile}><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
-            <li className="ln-nav-list-item" onClick={this.removeMobile}><Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume"/></li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}>
+              <Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume"/>
+            </li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}>
+              { isHome ? 
+                <Scrollchor className="ln-url" to="#work">work</Scrollchor>
+                : <a href="/#work" className="ln-url">work</a>
+              }
+            </li>
+            <li className="ln-nav-list-item" onClick={this.removeMobile}>
+              { isHome ? 
+                <Scrollchor className="ln-url" to="">home</Scrollchor>                
+                : <a href="/" className="ln-url">home</a>
+              }
+            </li>
           </ul>
           </div>
         </div>
@@ -62,8 +77,15 @@ class Navigation extends React.Component {
     } else {
       return (
         <ul className="ln-nav-list">
-          <li className="ln-nav-list-item"><Scrollchor className="ln-url" to="#work">work</Scrollchor></li>
-          <li className="ln-nav-list-item"><Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume" isNewTab={true}/></li>
+          <li className="ln-nav-list-item">
+            { isHome ? 
+              <Scrollchor className="ln-url" to="#work">work</Scrollchor>
+              : <a href="/#work" className="ln-url">work</a>
+            }
+          </li>
+          <li className="ln-nav-list-item">
+            <Url url="https://drive.google.com/file/d/1PoZvl59uDGA8TxPqWYLVudIqZN47Cwmp/view?usp=sharing" title="resume" isNewTab={true}/>
+          </li>
         </ul>
       )
     }
@@ -90,6 +112,12 @@ class Navigation extends React.Component {
       </nav>
     )
   }
+}
+
+// PropTypes
+Navigation.propTypes = {
+  isHome: PropTypes.bool,
+  isPink: PropTypes.bool
 }
 
 export default Navigation

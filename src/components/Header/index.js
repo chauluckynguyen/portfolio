@@ -43,8 +43,10 @@ class Header extends React.Component {
 					</p>
 				</div>
 				<div className="ln-header -jump">
-				 		<Scrollchor className="ln-url -jump" to="#work"><span></span></Scrollchor>
-					</div>
+					<Scrollchor className="ln-url -jump-down" to="#work" aria-label="scroll down">
+						<span></span>
+					</Scrollchor>
+				</div>
 			</section>
 		)
 	}

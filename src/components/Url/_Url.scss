@@ -35,7 +35,8 @@
 			content: none;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $color-teal;
 		}
 
@@ -45,8 +46,10 @@
 			height: $space-xl * 2; // 4rem
 			width: $space-xl * 2; // 4rem
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: center / cover no-repeat url('../../images/chevron-down-hover.svg');
+				outline: none;
 			}
 		}
 	}
@@ -64,7 +67,8 @@
 			content: none;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $color-teal;
 		}
 
@@ -74,8 +78,10 @@
 			height: $space-xl * 2; // 4rem
 			width: $space-xl * 2; // 4rem
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background: center / cover no-repeat url('../../images/chevron-up-hover.svg');
+				outline: none;
 			}
 		}
 	}

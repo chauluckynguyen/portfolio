@@ -10,11 +10,11 @@ import Codepen from 'react-codepen-embed'
 import Scrollchor from 'react-scrollchor'
 
 // Assets
-import image2 from '../images/design-system-sr.svg'
-import image3 from '../images/design-system-home.svg'
-import image4 from '../images/design-system-l2.svg'
-import image5 from '../images/design-system-ui.svg'
-import image6 from '../images/servicenow-teamphoto.svg'
+import designSystemSr from '../images/design-system-sr.svg'
+import designSystemHome from '../images/design-system-home.svg'
+import designSystemL2 from '../images/design-system-l2.svg'
+import designSystemUI from '../images/design-system-ui.svg'
+import serviceNowTeam from '../images/servicenow-teamphoto.svg'
 
 class ServiceNowDesignSystem extends React.Component {
   constructor(props) {
@@ -114,7 +114,7 @@ class ServiceNowDesignSystem extends React.Component {
             </Section>
             <Section className="ln-section -gallery">
               <div className="ln-section-body">
-                <img src={ image5 } alt=""/>
+                <img src={designSystemUI} alt=""/>
               </div>
             </Section>
             <Section headerClass="ln-section-heading -project" className="ln-section -project">
@@ -171,9 +171,9 @@ class ServiceNowDesignSystem extends React.Component {
             </Section>
             <Section className="ln-section -gallery">
               <div className="ln-section-body">
-                <img src={ image2 } alt=""/>
-                <img src={ image3 } alt=""/>
-                <img src={ image4 } alt=""/>
+                <img src={designSystemSr} alt=""/>
+                <img src={designSystemHome} alt=""/>
+                <img src={designSystemL2} alt=""/>
               </div>
             </Section>
             <Section headerClass="ln-section-heading -project" className="ln-section -project">
@@ -196,7 +196,6 @@ class ServiceNowDesignSystem extends React.Component {
                 hash="zydomd"
                 user="lucky-nguyen"
                 height={414}
-                loader={() => <div>Loading Codepen...</div>}
                 preview={false}
                 title="Accessible Navigation"
               />
@@ -215,12 +214,12 @@ class ServiceNowDesignSystem extends React.Component {
             </Section>
             <Section className="ln-section -gallery">
               <div className="ln-section-body">
-                <img src={ image6 } alt=""/>
+                <img src={serviceNowTeam} alt=""/>
               </div>
             </Section>
           </div>
-        <Scrollchor className={scrollClass} to="" aria-label="scroll to top">
-          <span></span>
+        <Scrollchor className={scrollClass} to="" aria-label="scroll to top" tabIndex="-1">
+          <span tabIndex="0"></span>
         </Scrollchor>
       </Layout>
     )

@@ -35,10 +35,13 @@ class Footer extends React.Component {
 						</p>
 						<ul className="ln-footer-list">
 							<li className="ln-footer-list-item">
-								<p>ui design</p>
+								<p>interface design</p>
 							</li>
 							<li className="ln-footer-list-item">
 								<p>sketch</p>
+							</li>
+							<li className="ln-footer-list-item">
+								<p>invision</p>
 							</li>
 							<li className="ln-footer-list-item">
 								<p>adobe illustrator</p>
@@ -51,6 +54,9 @@ class Footer extends React.Component {
 							</li>
 							<li className="ln-footer-list-item">
 								<p>user research</p>
+							</li>
+							<li className="ln-footer-list-item">
+								<p>storyboarding</p>
 							</li>
 						</ul>
 					</div>
@@ -79,6 +85,9 @@ class Footer extends React.Component {
 							</li>
 							<li className="ln-footer-list-item">
 								<p>hi-fi prototyping</p>
+							</li>
+							<li className="ln-footer-list-item">
+								<p>firebase</p>
 							</li>
 						</ul>
 					</div>

@@ -78,8 +78,8 @@ class IndexPage extends React.Component {
               />
             </ProjectList>
           </Section>
-          <Scrollchor className={scrollClass} to="" aria-label="scroll to top">
-            <span></span>
+          <Scrollchor className={scrollClass} to="" aria-label="scroll to top" tabIndex="-1">
+            <span tabIndex="0"></span>
           </Scrollchor>
         </div>
       </Layout>

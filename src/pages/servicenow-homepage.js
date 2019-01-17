@@ -70,7 +70,7 @@ class ServiceNowDesignSystem extends React.Component {
                 </tr>
                 <tr>
                   <td>Timeline</td> 
-                  <td>April 2016 – June 2016</td>
+                  <td>April 2017 – June 2017</td>
                 </tr>
                 <tr>
                   <td>Skills</td> 
@@ -94,10 +94,10 @@ class ServiceNowDesignSystem extends React.Component {
             <div className="ln-section-body">
               <h2 className="ln-section-heading">Side Note</h2>
               <p>
-                  Before I dive into my experiences with ServiceNow, I would like to note that I am currently with ServiceNow as full-time UX Engineer in the Experience Organization. As to date, 
-                  I have designed and implemented new-net components for ServiceNow's Agent Workspace as part of the Design System team,  
-                  and I have also built high-fidelity prototypes as part of the Design Technology team. If you want to learn more about my full-time experience at ServiceNow, 
-                  please message me! For the rest of this article, I will be discussing my experience as a Front-End Developer intern for ServiceNow.
+                  Before I dive into my experiences with ServiceNow, I would like to note that I am currently with ServiceNow as a full-time UX Engineer in the Experience Organization. As to date, 
+                  I have designed and implemented net-new components for ServiceNow's Agent Workspace as part of the Design System team,  
+                  and I have also built high-fidelity interactive prototypes as part of the Design Technology team. If you want to learn more about my full-time experience at ServiceNow, 
+                  please <Url url="mailto:luckyknguyen@gmail.com" title="email me!" size="sm" type="contrast"/> For the rest of this article, I will be discussing my experience as a Front-End Developer intern for ServiceNow.
               </p>
             </div>
             </Section>

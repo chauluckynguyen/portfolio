@@ -106,7 +106,7 @@ class ServiceNowDesignSystem extends React.Component {
               <h2 className="ln-section-heading">Overview</h2>
               <p>
                 ServiceNow — much like many large, corporate enterprises, faced its own battles with fostering a design-forward mentality into its work culture. 
-                In spring of 2016, I had the opportunity to be ServiceNow’s first UI/UX engineer intern on the Experience Organization (EO). Here, I tackled the problem of designing and building a Design System 
+                In spring of 2017, I had the opportunity to be ServiceNow’s first front-end developer intern on the Experience Organization (EO). Here, I tackled the problem of designing and building a Design System 
                 that could establish a design culture and consequently improve the work for the company and our customers. For this project, I specifically worked on 
                 designing and implementing the Design System’s homepage and enhancing the site’s accessibility.   
               </p>
@@ -133,13 +133,13 @@ class ServiceNowDesignSystem extends React.Component {
               <div className="ln-section-body">
                 <h2 className="ln-section-heading">the challenge</h2>
                 <p>
-                  I came in as the first UI/UX engineer intern on EO, specifically the Design System team, the centralized team that dealt with defining, designing, and 
+                  I came in as the first front-end developer intern on EO, specifically the Design System team, the centralized team that dealt with defining, designing, and 
                   implementing ServiceNow’s first ever Design System. The Design System team was fairly young, being only two years old with four members. Because of this, 
                   I was able to heavily lead and contribute to the project. Prior to my joining, designers attempted to establish a design-forward mentality into 
                   the business, but had failed many times. This was due to the fact that the ratio of designers to engineers were 1:20, causing important design 
-                  solutions to be overriden by strict deadlines and “we just want it to work - who cares what it looks like” mentality. Because of the lack of communication 
+                  solutions to be overlooked by strict deadlines and “we just want it to work - who cares what it looks like” mentality. Because of the lack of communication 
                   between designers and engineers/product managers, many of ServiceNow products were disjointed and complex. Without the knowledge of what 
-                  UI components, patterns, or resources are available, this slowed down productivity and innovation. Teams often found themselves scrambling to meet 
+                  UI components, patterns, or resources were available, this slowed down productivity and innovation. Teams often found themselves scrambling to meet 
                   deadlines as they were forced to redesign and rebuild components they didn’t know already existed.
                 </p>
                 <p className="ln-section-quote">" Because of the lack of communication between designers and engineers/product managers, many of ServiceNow products were disjointed and complex. "</p>
@@ -152,7 +152,7 @@ class ServiceNowDesignSystem extends React.Component {
                   Understanding the problem and analyzing why previous attempts have failed, I wanted to figure out what could be done better. This included setting up 
                   what ServiceNow calls “NorthStar’s” with designers, engineers, and product managers to not only discover the vision and strategy of the Design System, 
                   but to also identify the painpoints that each stakeholders faced in their daily work lives. I also studied design systems in other large enterprises 
-                  and their approach to the problem of building a design sytem while persuading the engineer-driven company the importance and value of human-centered design.
+                  and their approaches to the problem of building a design sytem while persuading the engineer-driven company the importance and value of human-centered design.
                 </p>
               </div>
             </Section>
@@ -180,12 +180,12 @@ class ServiceNowDesignSystem extends React.Component {
               <div className="ln-section-body">
                 <h2 className="ln-section-heading">solution: build homepage</h2>
                 <p>
-                  In addition, I helped design and build the ServiceNow Design System homepage that would help introduce its purpose, audience, and available resources. I often 
+                  In addition, I design and build the ServiceNow Design System homepage that would help introduce its purpose, audience, and available resources. I often 
                   collaborated with both my designer coworkers and engineer mentors to create something that would be eye-catching and informative, as a homepage should be.
-                  Through this, I learned how to identify UX problems while efficiently writing cleaner and more comprehensive code, especially refining my CSS/Sass skills.  I also worked 
+                  Through this, I identified UX problems while I efficiently wrote cleaner and more comprehensive code, which especially refined my CSS/Sass skills.  I also worked 
                   on enhancing the site's overall accessibility, such as adding ARIA landmark roles and attributes, correcting color contrast, and including assistive alt text to images. 
-                  EO lacked accessibility expertise, and so I found myself reading WCAG and teaching myself how to build accessible UI components. As a result, I found myself 
-                  growing into the role of baking accessibility into this and future products. You can see the finished project here: <Url url="http://designsystem.servicenow.com/#!/" title="here" size="sm" type="contrast" />
+                  EO lacked accessibility expertise, and so I studied WCAG and taught myself how to build accessible UI components. As a result, I found myself 
+                  growing into the role of an accessibility thought leader into this and future products. You can see the finished project here: <Url url="http://designsystem.servicenow.com/#!/" title="here" size="sm" type="contrast" />
                 </p>
                 <p className="ln-section-quote">Due to NDA, I'm unable to share details of my implementation. However, I added a fun CodePen to demonstrate how I would build an accessible navigation bar.  
                 <span role="img" aria-label="happy emoji"> 🙂</span></p>
@@ -205,8 +205,8 @@ class ServiceNowDesignSystem extends React.Component {
                 <h2 className="ln-section-heading">last thoughts</h2>
                 <p>
                   This was an incredible experience — to be able to dive into a problem that would affect the work life of employees and customers in ServiceNow. 
-                  This was definitely also incredibly challenging — as the first and only intern on the team (at the time), I definitely had to learn the products, culture, 
-                  and coding style quickly to solve problems quickly. Looking back at this this internship, I am incrediably grateful to have the opportunity to not only 
+                  This was also incredibly challenging — as the first and only intern on the team (at the time), I definitely had to learn the products, culture, 
+                  and coding style quickly to solve problems quickly. Looking back at this this internship, I am grateful to have the opportunity to not only 
                   refine my engineering, design, and business acumen skills, but to also contribute to ServiceNow’s transformative initiative of thinking design first 
                   while creating delightful user experiences.
                 </p>

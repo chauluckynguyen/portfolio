@@ -1,0 +1,20 @@
+///
+/// Builds text align util classes.
+/// @name util-text-align
+/// @group util-class
+/// @require {function} class
+///
+
+@mixin util-text-align {
+	#{class("util") + "-text-align-left"} {
+		text-align: left !important;
+	}
+
+	#{class("util") + "-text-align-right"} {
+		text-align: right !important;
+	}
+
+	#{class("util") + "-text-align-center"} {
+		text-align: center !important;
+	}
+}

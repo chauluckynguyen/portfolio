@@ -1,0 +1,44 @@
+///
+/// Builds display util classes.
+/// @name util-display
+/// @group util-class
+/// @require {function} class
+///
+
+@mixin util-display {
+	#{class("util") + "-d-none"} {
+		display: none !important;
+	}
+
+	#{class("util") + "-d-block"} {
+		display: block !important;
+	}
+
+	#{class("util") + "-d-flex"} {
+		display: flex !important;
+	}
+
+	#{class("util") + "-d-inline"} {
+		display: inline !important;
+	}
+
+	#{class("util") + "-d-inline-block"} {
+		display: inline-block !important;
+	}
+
+	#{class("util") + "-d-inline-flex"} {
+		display: inline-flex !important;
+	}
+
+	#{class("util") + "-d-table"} {
+		display: table !important;
+	}
+
+	#{class("util") + "-d-table-cell"} {
+		display: table-cell !important;
+	}
+
+	#{class("util") + "-d-table-row"} {
+		display: table-row !important;
+	}
+}

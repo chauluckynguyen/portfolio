@@ -1,0 +1,21 @@
+///
+/// Strip the selector of a class or ID
+/// @name strip-selector
+/// @group support
+/// @access private
+/// @param {string} $selector [null]
+///
+
+@function strip-selector($selector: null) {
+	@if not type-of($selector) == "string" {
+		@return null;
+	}
+
+	$prefix: str-slice($selector, 0, 1);
+
+	@if $prefix == "." or $prefix == "#" {
+		@return str-slice($selector, 2, str-length($selector));
+	}
+
+	@return $selector;
+}

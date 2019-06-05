@@ -1,0 +1,22 @@
+///
+/// A function that compiles a group of maps into one map.
+/// @name map-collect
+/// @group support
+/// @access private
+/// @param {map} $maps [null] - A group of maps
+/// @example
+///   $map-group: map-collect(
+///     $map-1,
+///     $map-2
+///   );
+///
+
+@function map-collect($maps...) {
+	$collection: ();
+
+	@each $map in $maps {
+		$collection: map-merge($collection, $map);
+	}
+
+	@return $collection;
+}

@@ -1,0 +1,15 @@
+///
+/// Builds z-index util classes.
+/// @name util-z-index
+/// @group util-class
+/// @require {function} class
+/// @require {variable} $_default-z-index
+///
+
+@mixin util-z-index {
+	@each $layer in $_default-z-index {
+		#{class("util") + "-z-" + nth($layer, 1)} {
+			z-index: nth($layer, 2) !important;
+		}
+	}
+}

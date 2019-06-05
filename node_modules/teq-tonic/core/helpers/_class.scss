@@ -1,0 +1,24 @@
+///
+/// Call to a predefined list of class names in the `$_namespace-component` map but can also handle a custom name.
+/// @name class
+/// @group helper
+/// @param {string} $selector [null] - Choose a selector name.
+/// @example scss
+///   #{class("button")} { }
+///
+///   // output
+///   .sample-btn { }
+/// @require {variable} $_namespace-component
+///
+
+@function class($selector: null) {
+	@if not $selector {
+		@error "A selector needs to be passed in.";
+	}
+
+	@if not map-get($_namespace-component, $selector) {
+		@return $selector;
+	}
+
+	@return map-get($_namespace-component, $selector);
+}

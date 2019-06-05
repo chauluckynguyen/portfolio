@@ -1,0 +1,32 @@
+///
+/// Builds screen reader util classes.
+/// @name util-screenreader
+/// @group util-class
+/// @require {function} class
+/// @require {mixin} size
+///
+
+@mixin util-screenreader {
+	#{class("util") + "-sr"} {
+		@include size(1px);
+		border: 0;
+		clip: rect(0,0,0,0);
+		clip-path: inset(50%);
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap;
+	}
+
+	#{class("util") + "-sr-focus"} {
+		&:active,
+		&:focus {
+			@include size(auto);
+			clip: auto;
+			clip-path: none;
+			overflow: visible;
+			position: static;
+			white-space: normal;
+		}
+	}
+}

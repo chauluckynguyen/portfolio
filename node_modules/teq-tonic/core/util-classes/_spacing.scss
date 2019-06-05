@@ -1,0 +1,53 @@
+///
+/// Builds spacing util classes.
+/// @name util-spacing
+/// @group util-class
+/// @require {function} class
+/// @require {function} space
+///
+
+@mixin util-spacing {
+	@for $i from 0 through 5 {
+		#{class("util") + "-m-" + $i} {
+			margin: space("base") * $i !important;
+		}
+
+		#{class("util") + "-mt-" + $i} {
+			margin-top: space("base") * $i !important;
+		}
+
+		#{class("util") + "-mr-" + $i} {
+			margin-right: space("base") * $i !important;
+		}
+
+		#{class("util") + "-mb-" + $i} {
+			margin-bottom: space("base") * $i !important;
+		}
+
+		#{class("util") + "-ml-" + $i} {
+			margin-left: space("base") * $i !important;
+		}
+	}
+
+	@for $i from 0 through 5 {
+		#{class("util") + "-p-" + $i} {
+			padding: space("base") * $i !important;
+		}
+
+		#{class("util") + "-pt-" + $i} {
+			padding-top: space("base") * $i !important;
+		}
+
+		#{class("util") + "-pr-" + $i} {
+			padding-right: space("base") * $i !important;
+		}
+
+		#{class("util") + "-pb-" + $i} {
+			padding-bottom: space("base") * $i !important;
+		}
+
+		#{class("util") + "-pl-" + $i} {
+			padding-left: space("base") * $i !important;
+		}
+	}
+}

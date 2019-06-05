@@ -1,0 +1,21 @@
+///
+/// Toggle options inside of the `$_setup` map.
+/// @name toggle
+/// @group support
+/// @access private
+/// @param {map} $options [()] - Toggle a group of options.
+/// @example scss
+///   @include toggle((
+///     "child": true,
+///     "default-selector-stored": get-setup("default-selector")));
+/// @require {function} set-setup
+/// @require {variable} $_setup
+///
+
+@mixin toggle($options: ()) {
+	@each $option in $options {
+		@if map-has-key($_setup, nth($option, 1)) {
+			$_setup: set-setup(nth($option, 1), nth($option, 2)) !global;
+		}
+	}
+}

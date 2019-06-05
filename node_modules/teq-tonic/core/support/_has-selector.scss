@@ -1,0 +1,16 @@
+///
+/// Checks to see if the selector exists in a map
+/// @name has-selector
+/// @group support
+/// @access private
+/// @param {string} $selector [null]
+/// @require {variable} $_namespace-component
+///
+
+@function has-selector($selector) {
+	@if map-get($_namespace-component, $selector) {
+		@return map-get($_namespace-component, $selector);
+	}
+
+	@return $selector;
+}

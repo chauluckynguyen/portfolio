@@ -15,7 +15,7 @@
 	border-radius: $font-xl;
 	color: $color-black;
 	display: inline-block;
-	font-family: 'Hind', sans-serif;
+	font-family: "Hind", sans-serif;
 	font-size: $font-sm;
 	font-weight: 700;
 	margin-top: $space-lg;
@@ -23,32 +23,32 @@
 	padding: $space-sm $space-xl;
 	transition: all 0.2s linear 0s;
 	text-decoration: none;
-	width: 18rem; 
+	width: 18rem;
 
 	&::before {
 		align-items: center;
 		content: "\1F4E9";
 		display: none;
-    font-family: FontAwesome;
-    font-size: $font-sm;
-    position: absolute;
-    justify-content: center;
-    right: $space-md;
-    top: 0;
-    opacity: 0;
-    height: 100%;
-    transition: all 0.2s linear 0s;
+		font-family: FontAwesome;
+		font-size: $font-sm;
+		position: absolute;
+		justify-content: center;
+		right: $space-md;
+		top: 0;
+		opacity: 0;
+		height: 100%;
+		transition: all 0.2s linear 0s;
 	}
 	
 	&:hover,
 	&:focus {
 		outline: none;
 		text-indent: -1.5rem;
-    
-    &::before {
+
+		&::before {
 			display: flex;
-      opacity: 1;
-      text-indent: 0px;
-    }
-  }
+			opacity: 1;
+			text-indent: 0;
+		}
+	}
 }
